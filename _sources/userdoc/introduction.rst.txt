@@ -1,0 +1,128 @@
+The *be_founders* database
+==========================
+
+.. _introdata-label:
+
+Data
+----
+
+The database has rich and detailed information about a large sample of
+entrepreneurs who (co-)founded start-ups in Belgium. It contains information
+on three main areas:
+
+1. Individual characteristics (name, gender, city, etc.)
+
+2. Education history:
+
+  * Educational institution
+  * Study program
+  * Start/end date
+
+3. Work experience:
+
+  * Employer / Start-up (co-)founded
+  * Job title
+  * Start/end date of the position
+
+.. _introsample-label:
+
+Sample
+------
+
+We built the sample in three steps. First, we obtained the list of all Belgian
+start-ups listed in Crunchbase, and retrieved their founders. Second, we collected
+information on the work and education history of the founders from the business
+directory LinkedIn. Third, we carefully parsed, cleaned and disambiguated the
+name-, work- and education-related fields (see :numref:`methodology-label`\,
+*Methodology*\) in order to reduce the incidence of spelling variations and
+heterogeneity in entries referring to the same entity.
+
+After extensive cleaning and disambiguation, the sample covers 774 entrepreneurs
+which (co-)founded 1211 companies. As well, the dataset includes 6526 work
+experience entries (employer/founded firm + job title) and 2295 education
+entries (educational institution + study program).
+
+Database Structure
+------------------
+
+We organized the database into separate tables. The current version (January
+2022) consists of 41 tables, whose names have the following format:
+
+<\N>_<xx>_<name>
+
+where <\N> is a letter that indicates the table's *family*\, <xx> a number and
+<name> is a unique string that reflects the table's content. There are four
+*families* (with their respective leading letter in parentheses):
+
+* Raw data (R)
+* Founders' information (F)
+* Educational background (E)
+* Work history (W)
+* Ready-to-use (U)
+* Other tables (T)
+
+As usual, the tables contain id's (one or more, local/foreign) that allow to link them to each
+other. See :numref:`tables-label` (*Tables*\) for a complete list of the tables
+and their contents.
+
+All tables are located in the folder *'./04_tables'*\, in csv format.
+
+.. note:: *be_founders* will soon be available as a self-contained SQLite
+  database engine.
+
+
+Links to external databases
+---------------------------
+
+To disambiguate each field we used libraries and dictionaries of *clean* names
+from external databases (e.g., lists of company names, university names, job
+titles). Besides helping with the harmonization step, such lists allowed us to
+link our data to external data sources. :numref:`table1-label` below illustrates
+the database's key fields and the external source we matched them to.
+
+.. _table1-label:
+
+.. table:: Field linking and mapping
+
+  +-----------------+---------+---------+--------------------------------+-------------------+
+  | Field           | Parsed/ | Disamb. | Linked to:                     | Mapped into       |
+  +                 +         +         +                                +                   +
+  |                 | cleaned |         | *db name + (id)*               |                   |
+  +=================+=========+=========+================================+===================+
+  | Person name     | Yes     | Yes     | Crunchbase (cb_person_uuid),   |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | LinkedIn (permalink)           |                   |
+  +-----------------+---------+---------+--------------------------------+-------------------+
+  | School/         | Yes     | Yes     | Orbis (bvd_id, duo_bvd_id,     |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | guo_bvd_id), ETER (id),        |                   |
+  +                 +         +         +                                +                   +
+  | university name |         |         | Carnegie classification        |                   |
+  |                 |         |         | (UNITID),                      |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | Webometrics (string name)      |                   |
+  |                 |         |         | :sup:`1`                       |                   |
+  +-----------------+---------+---------+--------------------------------+-------------------+
+  | Study program   | Yes     | Yes     |                                | ISCED levels and  |
+  |                 | :sup:`2`|         |                                |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         |                                | classification    |
+  +-----------------+---------+---------+--------------------------------+-------------------+
+  | Company name    | Yes     | Yes     | Crunchbase (org_uuid),         |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | Orbis (bvd_id, duo_bvd_id,     |                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | guo_bvd_id), Compustat (gvkey),|                   |
+  +                 +         +         +                                +                   +
+  |                 |         |         | CRSP (permno, permco, CUSIP)   |                   |
+  +-----------------+---------+---------+--------------------------------+-------------------+
+  | Job title       | Yes     | Yes     | O*NET (O*NET-SOC code)         | Functional        |
+  |                 |         |         |                                | areas, :sup:`3`   |
+  +                 +         +         +                                +                   +
+  |                 |         |         |                                | job ranks :sup:`4`|
+  +-----------------+---------+---------+--------------------------------+-------------------+
+
+Notes:  :sup:`1` Webometrics data does not provide a unique identifier;
+:sup:`2` we cleaned the strings, but parsed only the study type (e.g. bsc, msc, phd, etc.);
+:sup:`3` e.g. business and marketing, R&D and engineering, etc.;
+:sup:`4` e.g. top management, sub-management, non-management

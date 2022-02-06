@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T01_org_concordance &mdash; be_founders 1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/mystyle.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> be_founders
+            <img src="../../_static/logo-skema-blanc-og.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../user_main.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devdoc/dev_main.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">be_founders</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>T01_org_concordance</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/userdoc/tables/tables_T.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="t01-org-concordance">
+<span id="tables-t01-org-concordance-label"></span><h1>T01_org_concordance<a class="headerlink" href="#t01-org-concordance" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">T01_org_concordance</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>org_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of the organization founded by the entrepreneur, or where she worked/studied</p></td>
+</tr>
+<tr class="row-odd"><td><p>bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>Orbis bvd_id</p></td>
+</tr>
+<tr class="row-even"><td><p>int_org_id</p></td>
+<td><p>float64</p></td>
+<td><p>Unique id of international organizations</p></td>
+</tr>
+<tr class="row-odd"><td><p>compustat_id</p></td>
+<td><p>float64</p></td>
+<td><p>Unique Compustat id (WRDS)</p></td>
+</tr>
+<tr class="row-even"><td><p>crunchbase2013_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of companies in the Crunchbase 2013 dump</p></td>
+</tr>
+<tr class="row-odd"><td><p>crunchbase2015_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of companies in the Crunchbase 2015 dataset</p></td>
+</tr>
+<tr class="row-even"><td><p>crsp_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique CRSP ID (WRDS)</p></td>
+</tr>
+<tr class="row-odd"><td><p>duo_bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>bvd_id (Orbis) of the domestic ultimate owner of the company indicated by bvd_id (i.e., ultimate owner in the country)</p></td>
+</tr>
+<tr class="row-even"><td><p>guo_bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>bvd_id (Orbis) of the global ultimate owner of the company indicated by bvd_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>eter_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of universities in the ETER database</p></td>
+</tr>
+<tr class="row-even"><td><p>carnegie_id</p></td>
+<td><p>float64</p></td>
+<td><p>Unique id of educational institutions in the Carnegie Classification database</p></td>
+</tr>
+<tr class="row-odd"><td><p>brussels_wallonia_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of educational institutions in Brussels and Wallonia (own)</p></td>
+</tr>
+<tr class="row-even"><td><p>BE_schools_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of Belgian schools (own)</p></td>
+</tr>
+<tr class="row-odd"><td><p>webometrics_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of universities from the Webometrics database</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t02-orbis-company-data">
+<span id="tables-t02-orbis-company-data-label"></span><h1>T02_orbis_company_data<a class="headerlink" href="#t02-orbis-company-data" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">T02_orbis_company_data</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>company_name</p></td>
+<td><p>string</p></td>
+<td><p>Incorporated organization name (Orbis)</p></td>
+</tr>
+<tr class="row-odd"><td><p>bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>Orbis bvd_id</p></td>
+</tr>
+<tr class="row-even"><td><p>inactive</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>quoted</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>branch</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>owndata</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>woco</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>cc_iso</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code of the organization</p></td>
+</tr>
+<tr class="row-even"><td><p>bvd_sector</p></td>
+<td><p>string</p></td>
+<td><p>Organization sector (Orbis)</p></td>
+</tr>
+<tr class="row-odd"><td><p>bvd_sector_id</p></td>
+<td><p>string</p></td>
+<td><p>Organization sector id (Orbis)</p></td>
+</tr>
+<tr class="row-even"><td><p>specialization</p></td>
+<td><p>string</p></td>
+<td><p>Organization specialization (Orbis)</p></td>
+</tr>
+<tr class="row-odd"><td><p>nace2_main_section</p></td>
+<td><p>float64</p></td>
+<td><p>Organization’s NACE2 - main section (Orbis)</p></td>
+</tr>
+<tr class="row-even"><td><p>nace2_core_code</p></td>
+<td><p>string</p></td>
+<td><p>Organization’s NACE2 - core code (Orbis)</p></td>
+</tr>
+<tr class="row-odd"><td><p>duo_bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>bvd_id (Orbis) of the domestic ultimate owner of the company indicated by bvd_id (i.e., ultimate owner in the country)</p></td>
+</tr>
+<tr class="row-even"><td><p>guo_bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>bvd_id (Orbis) of the global ultimate owner of the company indicated by bvd_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>guo_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the global ultimate owner</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t03-orbis-bvd-sectors">
+<span id="tables-t03-orbis-bvd-sectors-label"></span><h1>T03_orbis_bvd_sectors<a class="headerlink" href="#t03-orbis-bvd-sectors" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">T03_orbis_bvd_sectors</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bvd_sector_id</p></td>
+<td><p>string</p></td>
+<td><p>Organization sector id (Orbis)</p></td>
+</tr>
+<tr class="row-odd"><td><p>bvd_sector</p></td>
+<td><p>string</p></td>
+<td><p>Organization sector (Orbis)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t04-edu-concordance-all">
+<span id="tables-t04-edu-concordance-all-label"></span><h1>T04_edu_concordance_ALL<a class="headerlink" href="#t04-edu-concordance-all" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">T04_edu_concordance_ALL</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>eter_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of universities in the ETER database</p></td>
+</tr>
+<tr class="row-even"><td><p>eter_name</p></td>
+<td><p>string</p></td>
+<td><p>Organization name</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+<tr class="row-even"><td><p>BxlWa_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of higher education institutions from the Brussels or Wallonia regions</p></td>
+</tr>
+<tr class="row-odd"><td><p>BxlWa_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier of higher education institutions from the Brussels or Wallonia regions</p></td>
+</tr>
+<tr class="row-even"><td><p>carnegie_name</p></td>
+<td><p>string</p></td>
+<td><p>Organization name</p></td>
+</tr>
+<tr class="row-odd"><td><p>carnegie_id</p></td>
+<td><p>float64</p></td>
+<td><p>Unique id of educational institutions in the Carnegie Classification database</p></td>
+</tr>
+<tr class="row-even"><td><p>WU_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the educational institution</p></td>
+</tr>
+<tr class="row-odd"><td><p>WU_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of educational institutions in the Webometrics ranking (own)</p></td>
+</tr>
+<tr class="row-even"><td><p>be_schools_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the school from the Brussels or Wallonia regions</p></td>
+</tr>
+<tr class="row-odd"><td><p>be_schools_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of schools from the Brussels or Wallonia regions</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t05-international-orgs">
+<span id="tables-t05-international-orgs-label"></span><h1>T05_international_orgs<a class="headerlink" href="#t05-international-orgs" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id5">
+<caption><span class="caption-text">T05_international_orgs</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>int64</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>int_org_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the international organization</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t06-compustat">
+<span id="tables-t06-compustat-label"></span><h1>T06_compustat<a class="headerlink" href="#t06-compustat" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id6">
+<caption><span class="caption-text">T06_compustat</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>compustat_name</p></td>
+<td><p>string</p></td>
+<td><p>Company name in the Compustat database</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+<tr class="row-even"><td><p>cc_fic</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code of the country where the organization was founded</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc_loc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code of the country where the organization is located</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t07-crunchbase-2013">
+<span id="tables-t07-crunchbase-2013-label"></span><h1>T07_crunchbase_2013<a class="headerlink" href="#t07-crunchbase-2013" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id7">
+<caption><span class="caption-text">T07_crunchbase_2013</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cb2013_name</p></td>
+<td><p>string</p></td>
+<td><p>Company name in the Crunchbase 2013 data dump</p></td>
+</tr>
+<tr class="row-odd"><td><p>normalized_name</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>country_code</p></td>
+<td><p>string</p></td>
+<td><p>Entrepreneur’s country code</p></td>
+</tr>
+<tr class="row-odd"><td><p>city</p></td>
+<td><p>string</p></td>
+<td><p>Entrepreneur’s city</p></td>
+</tr>
+<tr class="row-even"><td><p>founded_at</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>founding_year</p></td>
+<td><p>float64</p></td>
+<td><p>Company founding year</p></td>
+</tr>
+<tr class="row-even"><td><p>crunchbase_id</p></td>
+<td><p>string</p></td>
+<td><p>Company identifier for the Crunchbase company (WARNING!: This id is internal to the db and will not match to any external dataset)</p></td>
+</tr>
+<tr class="row-odd"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-even"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t08-crunchbase-2015">
+<span id="tables-t08-crunchbase-2015-label"></span><h1>T08_crunchbase_2015<a class="headerlink" href="#t08-crunchbase-2015" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id8">
+<caption><span class="caption-text">T08_crunchbase_2015</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cb2015_name</p></td>
+<td><p>string</p></td>
+<td><p>Company name in the Crunchbase 2015 datafile</p></td>
+</tr>
+<tr class="row-odd"><td><p>country_code</p></td>
+<td><p>string</p></td>
+<td><p>Entrepreneur’s country code</p></td>
+</tr>
+<tr class="row-even"><td><p>city</p></td>
+<td><p>string</p></td>
+<td><p>Entrepreneur’s city</p></td>
+</tr>
+<tr class="row-odd"><td><p>founded_at</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>founding_year</p></td>
+<td><p>float64</p></td>
+<td><p>Company founding year</p></td>
+</tr>
+<tr class="row-odd"><td><p>crunchbase_id</p></td>
+<td><p>string</p></td>
+<td><p>Company identifier for the Crunchbase company (WARNING!: This id is internal to the db and will not match to any external dataset)</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t09-crsp">
+<span id="tables-t09-crsp-label"></span><h1>T09_crsp<a class="headerlink" href="#t09-crsp" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id9">
+<caption><span class="caption-text">T09_crsp</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>comnam</p></td>
+<td><p>string</p></td>
+<td><p>CRSP company name (raw)</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t10-bvd">
+<span id="tables-t10-bvd-label"></span><h1>T10_bvd<a class="headerlink" href="#t10-bvd" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id10">
+<caption><span class="caption-text">T10_bvd</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>exp_org_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Name of the organization where the entrepreneur worked, or that she founded (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Score</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>bvd_id</p></td>
+<td><p>string</p></td>
+<td><p>Orbis bvd_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bvd_name</p></td>
+<td><p>string</p></td>
+<td><p>Orbis/bvd organization name</p></td>
+</tr>
+<tr class="row-even"><td><p>City</p></td>
+<td><p>float64</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Country</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Identifier</p></td>
+<td><p>float64</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t11-eter">
+<span id="tables-t11-eter-label"></span><h1>T11_eter<a class="headerlink" href="#t11-eter" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id11">
+<caption><span class="caption-text">T11_eter</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>eter_name</p></td>
+<td><p>string</p></td>
+<td><p>Organization name</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t12-carnegie">
+<span id="tables-t12-carnegie-label"></span><h1>T12_carnegie<a class="headerlink" href="#t12-carnegie" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id12">
+<caption><span class="caption-text">T12_carnegie</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>int64</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>carnegie_name</p></td>
+<td><p>string</p></td>
+<td><p>Organization name</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t13-universities-bxl-wallonie">
+<span id="tables-t13-universities-bxl-wallonie-label"></span><h1>T13_universities_bxl_wallonie<a class="headerlink" href="#t13-universities-bxl-wallonie" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id13">
+<caption><span class="caption-text">T13_universities_bxl_wallonie</span><a class="headerlink" href="#id13" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>BxlWa_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of higher education institutions from the Brussels or Wallonia regions</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t14-schools">
+<span id="tables-t14-schools-label"></span><h1>T14_schools<a class="headerlink" href="#t14-schools" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id14">
+<caption><span class="caption-text">T14_schools</span><a class="headerlink" href="#id14" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>be_schools_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the school from the Brussels or Wallonia regions</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t15-webometrics">
+<span id="tables-t15-webometrics-label"></span><h1>T15_webometrics<a class="headerlink" href="#t15-webometrics" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id15">
+<caption><span class="caption-text">T15_webometrics</span><a class="headerlink" href="#id15" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>string</p></td>
+<td><p>Unique identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>WU_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the educational institution</p></td>
+</tr>
+<tr class="row-even"><td><p>name_parsed</p></td>
+<td><p>string</p></td>
+<td><p>Institution name (parsed)</p></td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><p>string</p></td>
+<td><p>2-digit ISO country code</p></td>
+</tr>
+<tr class="row-even"><td><p>uni_url</p></td>
+<td><p>string</p></td>
+<td><p>url of the university’s main website</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t16-cb-companies">
+<span id="tables-t16-cb-companies-label"></span><h1>T16_cb_companies<a class="headerlink" href="#t16-cb-companies" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id16">
+<caption><span class="caption-text">T16_cb_companies</span><a class="headerlink" href="#id16" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cb_name</p></td>
+<td><p>string</p></td>
+<td><p>Crunchbase company name (raw)</p></td>
+</tr>
+<tr class="row-odd"><td><p>uu_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique Crunchbase company id</p></td>
+</tr>
+<tr class="row-even"><td><p>name_aka</p></td>
+<td><p>string</p></td>
+<td><p>Alternative company name</p></td>
+</tr>
+<tr class="row-odd"><td><p>rank_org</p></td>
+<td><p>float64</p></td>
+<td><p>Company ranking</p></td>
+</tr>
+<tr class="row-even"><td><p>rank_investors</p></td>
+<td><p>float64</p></td>
+<td><p>Investor’s ranking</p></td>
+</tr>
+<tr class="row-odd"><td><p>founding_date</p></td>
+<td><p>string</p></td>
+<td><p>Company founding date</p></td>
+</tr>
+<tr class="row-even"><td><p>founding_year</p></td>
+<td><p>float64</p></td>
+<td><p>Company founding year</p></td>
+</tr>
+<tr class="row-odd"><td><p>investor_type</p></td>
+<td><p>string</p></td>
+<td><p>Type of investor (that invested in the company)</p></td>
+</tr>
+<tr class="row-even"><td><p>acc_appl_deadline</p></td>
+<td><p>string</p></td>
+<td><p>Accelerator’s application deadline</p></td>
+</tr>
+<tr class="row-odd"><td><p>acc_appl_duration</p></td>
+<td><p>float64</p></td>
+<td><p>Accelerator’s application duration</p></td>
+</tr>
+<tr class="row-even"><td><p>org_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of the organization founded by the entrepreneur, or where she worked/studied</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t17-cb-industries">
+<span id="tables-t17-cb-industries-label"></span><h1>T17_cb_industries<a class="headerlink" href="#t17-cb-industries" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id17">
+<caption><span class="caption-text">T17_cb_industries</span><a class="headerlink" href="#id17" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cb_name</p></td>
+<td><p>string</p></td>
+<td><p>Crunchbase company name (raw)</p></td>
+</tr>
+<tr class="row-odd"><td><p>industry</p></td>
+<td><p>string</p></td>
+<td><p>Industry/industries where the company is active</p></td>
+</tr>
+<tr class="row-even"><td><p>org_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of the organization founded by the entrepreneur, or where she worked/studied</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t18-cb-names">
+<span id="tables-t18-cb-names-label"></span><h1>T18_cb_names<a class="headerlink" href="#t18-cb-names" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id18">
+<caption><span class="caption-text">T18_cb_names</span><a class="headerlink" href="#id18" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cb_name</p></td>
+<td><p>string</p></td>
+<td><p>Crunchbase company name (raw)</p></td>
+</tr>
+<tr class="row-odd"><td><p>founder_name</p></td>
+<td><p>string</p></td>
+<td><p>Name of the company founder</p></td>
+</tr>
+<tr class="row-even"><td><p>founder_id</p></td>
+<td><p>string</p></td>
+<td><p>Crunchbase founder id</p></td>
+</tr>
+<tr class="row-odd"><td><p>org_id</p></td>
+<td><p>string</p></td>
+<td><p>Unique id of the organization founded by the entrepreneur, or where she worked/studied</p></td>
+</tr>
+<tr class="row-even"><td><p>is_in_be_founders</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if the the company founders is included in the be_founders database, and 0 otherwise</p></td>
+</tr>
+<tr class="row-odd"><td><p>ind_id</p></td>
+<td><p>float64</p></td>
+<td><p>Unique entrepreneur id</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t19-entrepreneur-dyads-industries">
+<span id="tables-t19-entrepreneur-dyads-industries-label"></span><h1>T19_entrepreneur_dyads_industries<a class="headerlink" href="#t19-entrepreneur-dyads-industries" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id19">
+<caption><span class="caption-text">T19_entrepreneur_dyads_industries</span><a class="headerlink" href="#id19" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ind_id_left</p></td>
+<td><p>int64</p></td>
+<td><p>Entrepreneur id (left, where &lt;&gt;_left and &lt;&gt;_right identify a dyad)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ind_id_right</p></td>
+<td><p>int64</p></td>
+<td><p>Entrepreneur id (right, where &lt;&gt;_left and &lt;&gt;_right identify a dyad)</p></td>
+</tr>
+<tr class="row-even"><td><p>org_id_left</p></td>
+<td><p>string</p></td>
+<td><p>Org_id of the organization founded by ind_id_left</p></td>
+</tr>
+<tr class="row-odd"><td><p>org_id_right</p></td>
+<td><p>string</p></td>
+<td><p>Org_id of the organization founded by ind_id_right</p></td>
+</tr>
+<tr class="row-even"><td><p>industry</p></td>
+<td><p>string</p></td>
+<td><p>Industry/industries where the company is active</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t20-entrepreneur-dyads-sectors">
+<span id="tables-t20-entrepreneur-dyads-sectors-label"></span><h1>T20_entrepreneur_dyads_sectors<a class="headerlink" href="#t20-entrepreneur-dyads-sectors" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id20">
+<caption><span class="caption-text">T20_entrepreneur_dyads_sectors</span><a class="headerlink" href="#id20" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ind_id_left</p></td>
+<td><p>int64</p></td>
+<td><p>Entrepreneur id (left, where &lt;&gt;_left and &lt;&gt;_right identify a dyad)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ind_id_right</p></td>
+<td><p>int64</p></td>
+<td><p>Entrepreneur id (right, where &lt;&gt;_left and &lt;&gt;_right identify a dyad)</p></td>
+</tr>
+<tr class="row-even"><td><p>org_id_left</p></td>
+<td><p>string</p></td>
+<td><p>Org_id of the organization founded by ind_id_left</p></td>
+</tr>
+<tr class="row-odd"><td><p>org_id_right</p></td>
+<td><p>string</p></td>
+<td><p>Org_id of the organization founded by ind_id_right</p></td>
+</tr>
+<tr class="row-even"><td><p>bvd_sector_id</p></td>
+<td><p>string</p></td>
+<td><p>Organization sector id (Orbis)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Manuel Gigena.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

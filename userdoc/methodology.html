@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Methodology &mdash; be_founders 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mystyle.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Description of tables" href="tables.html" />
+    <link rel="prev" title="2. Quick start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> be_founders
+            <img src="../_static/logo-skema-blanc-og.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="user_main.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. The <em>be_founders</em> database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">2. Quick start</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Methodology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sample-and-primary-data-sources">3.1. Sample and primary data sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#construction-of-the-dataset">3.2. Construction of the dataset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cleaning-raw-strings">3.2.1. Cleaning raw strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#string-disambiguation">3.2.2. String disambiguation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-categorical-variables-from-job-titles-and-study-programs">3.2.3. Creating categorical variables from job titles and study programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">4. Description of tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql_main.html">5. Using the SQLite db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html">6. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devdoc/dev_main.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">be_founders</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="user_main.html">User Documentation</a> &raquo;</li>
+      <li><span class="section-number">3. </span>Methodology</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/userdoc/methodology.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="methodology">
+<span id="methodology-label"></span><h1><span class="section-number">3. </span>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline"></a></h1>
+<section id="sample-and-primary-data-sources">
+<h2><span class="section-number">3.1. </span>Sample and primary data sources<a class="headerlink" href="#sample-and-primary-data-sources" title="Permalink to this headline"></a></h2>
+<p>We built the sample in three steps. First, we obtained the list of all Belgian
+start-ups listed in Crunchbase, and retrieved their founders. Second, we collected
+information on the work and education history of the founders from the business
+directory LinkedIn. This step was done by hand by a team of collectors hired
+specifically for the task. The resulting (raw) data from Crunchbase and LinkedIn
+is in table <a class="reference internal" href="tables/tables_R.html#tables-r01-be-founders-source-label"><span class="std std-ref">R01_be_founders_source</span></a>.</p>
+</section>
+<section id="construction-of-the-dataset">
+<h2><span class="section-number">3.2. </span>Construction of the dataset<a class="headerlink" href="#construction-of-the-dataset" title="Permalink to this headline"></a></h2>
+<p>We used the data in table <a class="reference internal" href="tables/tables_R.html#tables-r01-be-founders-source-label"><span class="std std-ref">R01_be_founders_source</span></a> as the
+starting point to build the database, and proceeded as follows:</p>
+<ol class="arabic simple">
+<li><p>Extracting columns with the names, work experience and education history
+of the entrepreneurs from table <a class="reference internal" href="tables/tables_R.html#tables-r01-be-founders-source-label"><span class="std std-ref">R01_be_founders_source</span></a>.</p></li>
+<li><p>Combining all columns that referred to the same field into a single one.
+E.g., there are about 30 columns named <em>exp&lt;xx&gt;_org</em> (where <em>&lt;xx&gt;</em> is a
+number) with the names of each entrepreneur’s past employers,
+but columns like <em>featured_job_organization_name</em> contains employers’
+names as well.</p></li>
+<li><p>Creating raw tables <a class="reference internal" href="tables/tables_R.html#tables-r02-edu-source-label"><span class="std std-ref">R02_edu_source</span></a> and
+<a class="reference internal" href="tables/tables_R.html#tables-r03-exp-source-label"><span class="std std-ref">R03_exp_source</span></a> with raw data limited to
+education and work history, respectively.</p></li>
+<li><p>Harmonizing fields: canonicalizing, cleaning and parsing strings (see
+<a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a> for more details).</p></li>
+<li><p>Creating index variables for the parsed fields.</p></li>
+<li><p>Disambiguating the parsed (string) fields (i.e., reduce all the strings that
+refer to the same entity to a single, uniform, label) using NLP techniques to
+match them to relevant external databases (see
+<a class="reference internal" href="#section-matching-label"><span class="std std-ref">String disambiguation</span></a> for more details).</p></li>
+</ol>
+<p>We explain these steps in detail in the next sections.
+<a class="reference internal" href="#table-raw-parsed-label"><span class="std std-numref">Table 3.1</span></a> below shows the correspondences between the raw
+fields of <a class="reference internal" href="tables/tables_F.html#tables-f01-founders-info-label"><span class="std std-ref">F01_founders_info</span></a>, <a class="reference internal" href="tables/tables_R.html#tables-r02-edu-source-label"><span class="std std-ref">R02_edu_source</span></a>
+and <a class="reference internal" href="tables/tables_R.html#tables-r03-exp-source-label"><span class="std std-ref">R03_exp_source</span></a> and parsed fields in the main tables.</p>
+<span id="table-raw-parsed-label"></span><table class="docutils align-default" id="id7">
+<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data: from raw to parsed fields</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 22%" />
+<col style="width: 19%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Raw field name</p></th>
+<th class="head"><p>Parsed name</p></th>
+<th class="head"><p>Parsed id</p></th>
+<th class="head"><p>Linked to table(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name_src</p></td>
+<td><p>name</p></td>
+<td><p>ind_id</p></td>
+<td><p>F01_founders_info,
+R03_exp_source,
+R03_exp_source,
+E01_edu_main_parsed,
+W01_exp_main_parsed,
+U01_exp_flat,
+U02_edu_flat</p></td>
+</tr>
+<tr class="row-odd"><td><p>exp_org</p></td>
+<td><p>exp_org_parsed</p></td>
+<td><p>org_id</p></td>
+<td><p>W01_exp_main_parsed,
+U01_exp_flat</p></td>
+</tr>
+<tr class="row-even"><td><p>exp_jt</p></td>
+<td><p>jt_parsed</p></td>
+<td><p>jt_parsed_id</p></td>
+<td><p>W02_job_titles_raw_parsed,
+W02_job_titles_raw_parsed</p></td>
+</tr>
+<tr class="row-odd"><td><p>edu_org</p></td>
+<td><p>edu_org_parsed</p></td>
+<td><p>org_id</p></td>
+<td><p>E01_edu_main_parsed,
+U02_edu_flat</p></td>
+</tr>
+<tr class="row-even"><td><p>edu_prg</p></td>
+<td><p>edu_prg_parsed</p></td>
+<td><p>jt_parsed_id</p></td>
+<td><p>E01_edu_main_parsed,
+W02_job_titles_raw_parsed,
+U02_edu_flat</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Parsing of job titles:</strong> There is unique id for each raw job title
+in <em>exp_jt</em>, stored as variable <em>jt_raw_id</em>. Because one raw job title often
+includes several roles (e.g., “CEO, founder”), we parsed job titles in a way
+that assigns each of these roles to a separate <em>parsed job title</em>. Hence,
+each <em>jt_raw_id</em> may correspond to multiple <em>jt_parsed_id</em>. Table
+<a class="reference internal" href="tables/tables_W.html#tables-w02-job-titles-raw-parsed-label"><span class="std std-ref">W02_job_titles_raw_parsed</span></a> contains the correspondence between the id’s
+of raw and parsed job titles.</p>
+</div>
+<section id="cleaning-raw-strings">
+<span id="section-cleaning-label"></span><h3><span class="section-number">3.2.1. </span>Cleaning raw strings<a class="headerlink" href="#cleaning-raw-strings" title="Permalink to this headline"></a></h3>
+<p>We pre-processed and harmonized all raw string fields by canonicalizing them:</p>
+<ol class="arabic simple">
+<li><p>Removing punctuation marks and non-alphanumeric characters;</p></li>
+<li><p>Replacing accented, special and non-latin characters with their closest
+character in a US keyboard (e.g., é -&gt; e, á -&gt; a, ž -&gt; z;
+using <code class="xref py py-mod docutils literal notranslate"><span class="pre">unidecode</span></code>);</p></li>
+<li><p>Replacing roman numerals by latin numerals;</p></li>
+<li><p>Turning strings to uppercase (in the experience fields) or lowercase
+(in the education fields)</p></li>
+<li><p>Removing multiple, leading and trailing white spaces</p></li>
+<li><p>Standardizing firm type tokens (<em>limited</em> -&gt; <em>ltd</em>, <em>company</em> -&gt; <em>co</em>,
+<em>international</em> -&gt; <em>intl</em>, etc.)</p></li>
+</ol>
+</section>
+<section id="string-disambiguation">
+<span id="section-matching-label"></span><h3><span class="section-number">3.2.2. </span>String disambiguation<a class="headerlink" href="#string-disambiguation" title="Permalink to this headline"></a></h3>
+<p>We matched the harmonized strings containing organization names (from
+firms and universities/educational instutitutions) and job titles against
+dictionaries and lists of terms compiled using relevant external databases.
+This facilitated the disambiguation, but also allowed to directly link our data
+with the external databases where those dictionaries and lists come from.
+Moreover, we matched some fields to several different databases. E.g.,
+we matched universities names to Orbis company data, but also to the ETER and
+Carnegie databases. Similarly, we matched firm names to Orbis, Compustat and CSRP.</p>
+<section id="matching-organization-names">
+<h4><span class="section-number">3.2.2.1. </span>Matching organization names<a class="headerlink" href="#matching-organization-names" title="Permalink to this headline"></a></h4>
+<section id="matching-against-business-register-datasets">
+<span id="section-matching-bus-reg-label"></span><h5><span class="section-number">3.2.2.1.1. </span>Matching against business register datasets<a class="headerlink" href="#matching-against-business-register-datasets" title="Permalink to this headline"></a></h5>
+<p>First, we pooled all harmonized organization names (<em>exp_org</em>,
+<em>featured_job_organization_name</em>, <em>edu_org</em>) and matched them to Bvd’s Bel-first
+and Orbis databases, using their batch upload tools. These tools take a company
+name (i.e., our harmonized firm names) and look for their closest match in a
+business directory of millions of statutory organization names (i.e., the name
+under which organizations are recorded in national business registers). Both
+databases record alternative and prior names of the organizations.</p>
+<p>Bel-first has data about organizations registered in Belgium, whereas Orbis has
+world-wide coverage. Hence, Bel-first data is a subset of Orbis. However,
+because the organizations in our database are predominantly Belgian, we matched
+the harmonized names using Bel-first to begin with. We retained succesful
+matches, and took the names that remained unmatched to the Orbis tool. Finally,
+we replaced harmonized names in our list with their respective successful
+from Bel-first and Orbis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both Bel-first and Orbis provide an indication of the quality of
+their match: a ranking from excellent to poor using letters A-E. We kept
+only A and B matches–i.e., excellent and good.</p>
+</div>
+<p>Second, we took the list that resulted from the previous step and matched the
+names against all firm/organization names in each of the following datasets:</p>
+<ul class="simple">
+<li><p>Compustat (downloaded on 24th September, 2021),</p></li>
+<li><p>CSRP (downloaded on 25th September 2021),</p></li>
+<li><p>the Crunchbase 2013 data dump and a partial 2015 export (see <a class="reference internal" href="links.html#links-label"><span class="std std-ref">Links</span></a>),</p></li>
+<li><p>AnaCredit’s list of international organization (see <a class="reference internal" href="links.html#links-label"><span class="std std-ref">Links</span></a>).</p></li>
+</ul>
+<p>Prior to matching, we pre-processed the company names with the steps listed in
+<a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a>. In this step we used <code class="xref py py-mod docutils literal notranslate"><span class="pre">process.extractOne</span></code> from the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">fuzzywuzzy</span></code>. As inputs, the <code class="xref py py-mod docutils literal notranslate"><span class="pre">extractOne</span></code> module takes a list of focal strings
+(our organization names) and a list of candidates names (e.g., all Compustat
+firm names). As output, it finds the string in the candidate group which is closest to
+each focal string, using the Levenshtein Distance (LD).</p>
+<p>Third, we further refined the matching results from step two and retained only
+{focal, candidate} duples fulfilling one of the following conditions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adjusted token sort ratio &gt;= 95</p></li>
+</ul>
+<p>OR</p>
+<ul class="simple">
+<li><p>Adjusted token sort ratio &gt;70 AND token set ratio &gt;= 95</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Adjusted token sort ratio</em> and <em>token set ratio</em> are two LD-based metrics in
+the <code class="xref py py-mod docutils literal notranslate"><span class="pre">fuzzywuzzy.fuzz</span></code> module. The former computes the LD between a
+pair of strings strings after tokenizing each string and sorting its tokens
+alphabetically; the resulting score is adjusted using the inverse string length.
+The latter computes the LD latter after tokenizing and performing a set
+operation to remove repeated tokens.</p>
+</div>
+<p>We run the steps explained in this sub-section twice:</p>
+<ul class="simple">
+<li><p>With the complete harmonized strings</p></li>
+<li><p>Removing the firm type tokens (e.g., <em>co</em>, <em>ltd</em>, <em>inc</em>, etc.)</p></li>
+</ul>
+<p>We examined the entities that could not be matched and found out that,
+oftentimes, the public and statutory name of a company differ and the self-reported
+company name in LinkedIn will not match any company from any database. E.g.,
+in our raw data, people report having worked for Humin, whose statutory name is
+Humanovation. Therefore, as a fourth step, we analyzed the organization names that
+were still unmatched and manually looked for their matching firms in the Orbis
+database. To do this we looked up firms using information other than the name,
+such as the physical address, website, email, phone number and/or founders’ name.</p>
+<p>Finally, the quality of the matching process was evaluated by two external
+raters.</p>
+<div class="admonition-matching-results admonition">
+<p class="admonition-title">Matching results</p>
+<p>There were 5,602 distinct organization names in the raw data (including firms
+as well as educational institutions). The harmonization and disambiguation
+steps as described above reduced the number of distinct organizations to 4244.
+Of this total, 3,766 (88.7%) were matched to an external database and 3748
+(88.3%) were matched to BvD (Bel-first and/or Orbis).</p>
+</div>
+</section>
+<section id="matching-against-datasets-of-university-names">
+<h5><span class="section-number">3.2.2.1.2. </span>Matching against datasets of university names<a class="headerlink" href="#matching-against-datasets-of-university-names" title="Permalink to this headline"></a></h5>
+<p>We matched the list of organization names to three databases containing names
+of educational institutions:</p>
+<ul class="simple">
+<li><p>ETER (dataset downloaded on 26th July, 2021)</p></li>
+<li><p>Carnegie Classification (dataset downloaded on 1st September, 2021)</p></li>
+<li><p>Webometrics Ranking (we scraped the complete website on 19th July, 2021)</p></li>
+</ul>
+<p>To do so, we pre-processed the names of the educational institutions in these
+datasets according to the steps listed in <a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a>, and
+matched our organization names against them, following the procedure described in
+<a class="reference internal" href="#section-matching-bus-reg-label"><span class="std std-ref">Matching against business register datasets</span></a>–i.e., in this step the <em>candidates</em>
+where ETER, Carnegie and Webometrics Ranking pre-processed names.</p>
+<div class="admonition-concordance-table admonition">
+<p class="admonition-title">Concordance table</p>
+<p>Many organizations in our database were successfully matched against multiple
+external sources (e.g., KU Leuven is matched to Orbis, ETER and Webometrics).
+To facilitate the future use of the matched data we built table
+<a class="reference internal" href="tables/tables_T.html#tables-t01-org-concordance-label"><span class="std std-ref">T01_org_concordance</span></a>, which links <em>org_id’s</em> with the id’s of
+multiple external databases.</p>
+</div>
+</section>
+</section>
+<section id="matching-job-titles">
+<span id="section-matching-job-titles-label"></span><h4><span class="section-number">3.2.2.2. </span>Matching job titles<a class="headerlink" href="#matching-job-titles" title="Permalink to this headline"></a></h4>
+<p>The pre-processing of the (raw) job title strings posed an additional challenge:
+a large share of job title strings contain more than one role (e.g.,
+“Co-founder and CEO”, “Technical Sales and Software Engineer”, “COO, Board
+member”). We dealt with this issue in several steps. First, we split the raw
+string using the following
+characters/terms: {‘,’; ‘ &amp; ‘; ‘ - ‘; ‘ and ‘}. Second, we applied the steps
+in section <a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a> to the split strings. After parsing,
+one job title in its raw form (in field <em>exp_jt</em>, identified also by
+<em>jt_raw_id</em>) may correspond to more than one job title in its parsed form
+(in field <em>jt_parsed</em>, identified also by <em>jt_parsed_id</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The correspondence between raw and parsed job titles is in table
+<a class="reference internal" href="tables/tables_W.html#tables-w02-job-titles-raw-parsed-label"><span class="std std-ref">W02_job_titles_raw_parsed</span></a></p>
+</div>
+<p>Third, we disambiguated the parsed job titles (i.e., split and pre-processed)
+following the procedure in <a class="reference internal" href="#section-matching-bus-reg-label"><span class="std std-ref">Matching against business register datasets</span></a>, matching them
+against a dictionary composed by all the job titles in the O*NET Database.
+More specifically, we used the alternate job titles in O*NET (identified by
+the field <em>Alternate Title</em> in the <strong>Alternate titles</strong> table). Note that the
+alternate titles were also pre-processed according to <a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a>.</p>
+<p>Fourth, and finally, we performed extensive manual revision and correction of
+the parsed job title strings that could not be matched to O*NET.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>PhD, courses and other education</p>
+<p>Many individuals in our database list their phd’s and other education (such as courses
+and training, presumably with job-market relevance) inside work experience. Our
+meticulous parsing and classification steps allowed us to spot such entries,
+and we reclassified them as education.</p>
+</div>
+<div class="admonition-from-raw-job-title-to-o-net-soc-code admonition">
+<p class="admonition-title">From raw job title to O*NET SOC code</p>
+<p>Merge W02_job_titles_raw_parsed with W03_job_titles_parsed_onet on
+<em>jt_parsed_id</em> to obtain the O*NET SOC code(s) matched to each raw job title.</p>
+</div>
+</section>
+</section>
+<section id="creating-categorical-variables-from-job-titles-and-study-programs">
+<h3><span class="section-number">3.2.3. </span>Creating categorical variables from job titles and study programs<a class="headerlink" href="#creating-categorical-variables-from-job-titles-and-study-programs" title="Permalink to this headline"></a></h3>
+<section id="job-titles">
+<h4><span class="section-number">3.2.3.1. </span>Job titles<a class="headerlink" href="#job-titles" title="Permalink to this headline"></a></h4>
+<p>We followed the methodology in <span id="id1">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> to classify the parsed
+job titles into:</p>
+<ul class="simple">
+<li><p>Job ranks: top management, management, sub-management and non-management</p></li>
+<li><p>Functional areas: Business and Management, Production, R&amp;D and Engineering,
+Personnel, Sales and Marketing, Accounting and Finance</p></li>
+<li><p>Other indicators (e.g., <em>engineering role</em>, <em>medical role</em>, etc.)</p></li>
+</ul>
+<p>The cited methodology uses sets of keywords linked to each of the fields above
+to assign a job title string to one class if two conditions are
+fulfilled:</p>
+<ul class="simple">
+<li><p>the string contains one or more keywords linked to a class,</p></li>
+<li><p>the string does not contain a keyword in a set of exclusions, particular to that class.</p></li>
+</ul>
+<p>For instance, we classify job title strings containing terms such as <em>sales</em>, <em>key account</em> or
+<em>marketer</em> into <strong>Sales and Marketing</strong>. However, we abstain from doing so
+if the string also contains a term such as <em>bond</em> (e.g., in <em>bond sales</em>).</p>
+<p>Finally, note that we grouped the job rank, functional areas and <em>other</em>
+classifications at the level of the raw job title, and not the parsed job titles.
+Hence, tables <a class="reference internal" href="tables/tables_W.html#tables-w05-job-titles-job-rank-label"><span class="std std-ref">W05_job_titles_job_rank</span></a>,
+<a class="reference internal" href="tables/tables_W.html#tables-w06-job-titles-functional-areas-label"><span class="std std-ref">W06_job_titles_functional_areas</span></a> and
+<a class="reference internal" href="tables/tables_W.html#tables-w07-job-titles-other-indicators-label"><span class="std std-ref">W07_job_titles_other_indicators</span></a> link the <em>jt_raw_id</em>
+to the classifications assigned following the procedure in this section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We used the dictionary provided by <span id="id2">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and expanded it with
+new terms after careful examination of the job title string in our database. A
+copy of the dictionary we used in this step is available in
+‘./03_params/parse_jt_job_ranks_funct_areas_curr.xlsx’.</p>
+</div>
+</section>
+<section id="study-programs">
+<h4><span class="section-number">3.2.3.2. </span>Study programs<a class="headerlink" href="#study-programs" title="Permalink to this headline"></a></h4>
+<p>We parsed the <em>edu_prg</em> raw string in order to identify</p>
+<ul class="simple">
+<li><p>the level of education of each study program (primary school, secondary school, bachelor, etc.), and</p></li>
+<li><p>the field of each study program (Arts, humanities, ICT, etc.).</p></li>
+</ul>
+<p>We proceeded as follows.</p>
+<p><strong>Cleaning.</strong> We applied the methodology
+in section <a class="reference internal" href="#section-cleaning-label"><span class="std std-ref">Cleaning raw strings</span></a> to the <em>edu_prg</em> field. Additionally,
+we cleaned/harmonized the parts of the string that refer
+to the level of the study program (e.g., ‘master’ -&gt; ‘msc’, ‘Ph. d.’ -&gt; ‘phd’).
+The harmonized strings are stored as <em>edu_prg_parsed</em> in table
+<a class="reference internal" href="tables/tables_E.html#tables-e03-edu-programs-label"><span class="std std-ref">E03_edu_programs</span></a>.</p>
+<p><strong>Levels of education.</strong> We adapted the methodology in
+<span id="id3">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words that relate to <a class="reference external" href="https://circabc.europa.eu/sd/a/84d88f97-9cc7-45be-963f-ed088440b04b/ISCED%202011%20Operational%20Manual.pdf">ISCED levels of education</a>.
+ISCED 2011 has nine levels of educations, from level 0 to 8. We collapsed them
+into 6 different categories according to <a class="reference internal" href="#table-isced-levels-label"><span class="std std-numref">Table 3.2</span></a>.</p>
+<span id="table-isced-levels-label"></span><table class="docutils align-default" id="id8">
+<caption><span class="caption-number">Table 3.2 </span><span class="caption-text">Table: Correspondence with ISCED levels</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Study level in our database</p></th>
+<th class="head"><p>Corresponds to ISCED level(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Primary school</p></td>
+<td><p>0, 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secondary school</p></td>
+<td><p>2, 3</p></td>
+</tr>
+<tr class="row-even"><td><p>Post secondary (tertiary)</p></td>
+<td><p>4, 5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bachelor’s degree</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>Master’s degree</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Doctoral degree</p></td>
+<td><p>8</p></td>
+</tr>
+</tbody>
+</table>
+<p>We used the word lists to classify <em>edu_prg_parsed</em> into study levels.
+Specifically, we assigned a study program string to a study level if two conditions are
+fulfilled:</p>
+<ul class="simple">
+<li><p>the string contains one or more keywords linked to a level,</p></li>
+<li><p>the string does not contain a keyword in a set of exclusions, particular to that level.</p></li>
+</ul>
+<p>Some study programs could not be assigned a study level as above and we coded
+them as ‘other’.</p>
+<p>The following example illustrates the approach. Our algorithm parsed the raw
+string “bachelor in anthropology” “bsc in anthropology” and classified it as
+‘bachelor degree’ because it contains the term <strong>bsc</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We reclassified all post-doctoral experience as work experience. Hence,
+post-docs are in the experience-related tables, and not in the
+education-related ones.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A copy of the dictionary we used in this step is available in
+‘./03_params/parse_edu_isced_levels_curr.xlsx’.</p>
+</div>
+<p><strong>Fields of education.</strong> We classified the study programs into the fields of study defined in the
+<a class="reference external" href="https://circabc.europa.eu/sd/a/286ebac6-aa7c-4ada-a42b-ff2cf3a442bf/ISCED-F%202013%20-%20Detailed%20field%20descriptions.pdf">ISCED-F 2013 taxonomy</a>.
+(see table <a class="reference internal" href="tables/tables_E.html#tables-e06-isced-fields-defs-label"><span class="std std-ref">E06_isced_fields_defs</span></a>). As before, we adapted the
+methodology in <span id="id4">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words and tokens
+that relate to the study fields. The starting point of our word list was the
+<em>Appendix II: Numerical Code List</em> from the ISCED-F2013 report, which provides
+about 1,200 study programs that belong to the fields of
+study in the taxonomy. We expanded these lists with additional keywords
+as we explored the data.</p>
+<p>We used the word lists referred above to classify <em>edu_prg_parsed</em> into study fields.
+Specifically, we assigned a study program string to a study field if two conditions are
+fulfilled:</p>
+<ul class="simple">
+<li><p>the string contains one or more keywords linked to a field,</p></li>
+<li><p>the string does not contain a keyword in a set of exclusions, particular to that field.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some entrepreneurs who attended an accelerator program list them as work experience,
+while others as education. To harmonize, we reclassified all accerelator-related
+entries as work experience.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A copy of the dictionary we used in this step is available in
+‘./03_params/parse_edu_isced_fields_curr.xlsx’.</p>
+</div>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id6"><span class="brackets">CT16</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>)</span></dt>
+<dd><p>Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. <em>Entrepreneurship Theory and Practice</em>, 40(2):289–305, 2016.</p>
+</dd>
+</dl>
+</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="2. Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tables.html" class="btn btn-neutral float-right" title="4. Description of tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Manuel Gigena.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+-----
+To do
+-----
+
+[Place here list of to do's]
+
+* In Python:
+
+  * Run the complete python script again (26.1.2022) **DONE**
+  * remove the 'GVKEY' from the compustat_id's **DONE**
+  * Can I use the ISCED levels to estimate the age? (e.g., the earliest edu_sy in
+    ISCED=bachelor is about 18yo)
+  * Change index and numbering of tables: raw (R<>), tables (T<>), flat & dyads (U<>) **DONE**
+
+* SQL
+
+  * Make the SQLite db
+  * Make the entity-representation schema
+
+* Add a table (csv) in introduction: key field / parsed / harmonized /
+  disambiguated / matched to **DONE**
+
+* Manually get/assign industries to some start-ups that didn't have
+  industry tags in Crunchbase (cb_industries_manual.xlsx)
+
+* join E02_edu_orgs_parsed_names and W08_exp_company_parsed_name???
+
+* make a working example for the job ranks & functional area classification (
+  e.g., pick "Technical Sales and Software Engineer" and explain how it was classified:
+  split, parsed, sorted into classes, then grouped again)

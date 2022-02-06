@@ -1,0 +1,47 @@
+.. be_founders documentation master file, created by
+   sphinx-quickstart on Mon Jan 24 16:23:27 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+##########################
+The *be_founders* database
+##########################
+
+This database contains rich, detailed information about a sample of Belgian
+start-up founders, including:
+
+* Companies (co-)founded
+* Education history
+* Work experience
+* Founders' demographics and other background information
+
+The data allow to approximate the networks of start-ups' founding team members,
+and contains indicators for their (shared) professional and educational
+backgrounds. Additionally, such key fields as organization names and job titles
+have been disambiguated and matched to external databases of company data
+(Orbis, Compustat, CRSP), university data (ETER, Carnegie Classification) and
+job classification/skills (O*NET), paving the way to the construction of
+new and more complex indicators in the future.
+
+Current version
+---------------
+
+v1.0 (January 2022)
+
+#####
+Index
+#####
+
+.. Hidden TOCs
+
+.. toctree::
+
+    userdoc/user_main
+    devdoc/dev_main
+    
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

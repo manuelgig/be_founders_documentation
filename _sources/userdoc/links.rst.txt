@@ -1,0 +1,17 @@
+.. _links-label:
+
+Links
+=====
+
+[Links to other databases]
+
+* `ETER <https://www.eter-project.com/>`_
+* `Carnegie Classification <https://carnegieclassifications.iu.edu/>`_
+* `Webometrics rankings <https://www.webometrics.info/en>`_
+* `O*NET <https://www.onetcenter.org/database.html>`_
+* `ISCED <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=International_Standard_Classification_of_Education_(ISCED)>`_
+  levels and fields
+* `Bel-first <https://belfirst.bvdinfo.com/>`_
+* `Orbis <https://orbis.bvdinfo.com/>`_
+* `AnaCredit <https://www.ecb.europa.eu/stats/money/aggregates/anacredit/shared/pdf/List_of_international_organisations.xlsx>`_
+* `Crunchbase 2015 partial data dump <https://github.com/notpeter/crunchbase-data>`_

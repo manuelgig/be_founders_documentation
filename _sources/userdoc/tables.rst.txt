@@ -1,0 +1,40 @@
+.. _tables-label:
+
+Description of tables
+=====================
+
+Personal information
+--------------------
+
+.. include:: tables/tables_F.rst
+
+Education history
+-----------------
+
+.. include:: tables/tables_E.rst
+
+Work experience
+---------------
+
+.. include:: tables/tables_W.rst
+
+Ready-to-use (analysis)
+-----------------------
+
+*(See* :numref:`quickstart-label` *for additional information about the tables
+in this section)*
+
+.. include:: tables/tables_U.rst
+
+
+
+Raw tables
+------------
+
+.. include:: tables/tables_R.rst
+
+
+Other tables
+------------
+
+.. include:: tables/tables_T.rst

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Quick start &mdash; be_founders 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mystyle.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Methodology" href="methodology.html" />
+    <link rel="prev" title="1. The be_founders database" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> be_founders
+            <img src="../_static/logo-skema-blanc-og.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="user_main.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. The <em>be_founders</em> database</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Quick start</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parsed-tables">2.1. Parsed tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#w01-exp-main-parsed">2.1.1. W01_exp_main_parsed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#e01-edu-main-parsed">2.1.2. E01_edu_main_parsed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flat-tables">2.2. Flat tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-tables">2.3. Other tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#u03-entrepreneur-dyads">2.3.1. U03_entrepreneur_dyads</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-be-founders-dashboard">2.4. The <em>be_founders</em> dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="methodology.html">3. Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">4. Description of tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql_main.html">5. Using the SQLite db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html">6. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devdoc/dev_main.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">be_founders</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="user_main.html">User Documentation</a> &raquo;</li>
+      <li><span class="section-number">2. </span>Quick start</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/userdoc/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quick-start">
+<span id="quickstart-label"></span><h1><span class="section-number">2. </span>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline"></a></h1>
+<p><em>Please go quickly over</em> <a class="reference internal" href="introduction.html#introdata-label"><span class="std std-numref">Section 1.1</span></a> <em>(Data) and</em>
+<a class="reference internal" href="introduction.html#introsample-label"><span class="std std-numref">Section 1.2</span></a> <em>(Sample) before you proceed with this section.</em></p>
+<section id="parsed-tables">
+<h2><span class="section-number">2.1. </span>Parsed tables<a class="headerlink" href="#parsed-tables" title="Permalink to this headline"></a></h2>
+<p>Tables <a class="reference internal" href="tables/tables_W.html#tables-w01-exp-main-parsed-label"><span class="std std-ref">W01_exp_main_parsed</span></a> and
+<a class="reference internal" href="tables/tables_E.html#tables-e01-edu-main-parsed-label"><span class="std std-ref">E01_edu_main_parsed</span></a> are the main tables in the database. They
+relate the id’s of each entrepreneur to the companies where they worked (as
+founders and/or employees) and their job title, as well as the educational
+institutions they attended and the programs studied there. As well, these tables
+list the starting and ending date at each place.</p>
+<section id="w01-exp-main-parsed">
+<h3><span class="section-number">2.1.1. </span>W01_exp_main_parsed<a class="headerlink" href="#w01-exp-main-parsed" title="Permalink to this headline"></a></h3>
+<p>A row in table <a class="reference internal" href="tables/tables_W.html#tables-w01-exp-main-parsed-label"><span class="std std-ref">W01_exp_main_parsed</span></a> can be read as:</p>
+<p><em>Person &lt;ind_id&gt; worked for firm &lt;org_id&gt; in a role described by &lt;jt_raw_id&gt;,
+from &lt;exp_sy&gt; to &lt;exp_ey&gt;.</em></p>
+<p>Where the fields &lt;ind_id&gt;, &lt;org_id&gt; and &lt;jt_raw_id&gt; can be looked up in tables
+<a class="reference internal" href="tables/tables_F.html#tables-f01-founders-info-label"><span class="std std-ref">F01_founders_info</span></a>, <a class="reference internal" href="tables/tables_T.html#tables-t01-org-concordance-label"><span class="std std-ref">T01_org_concordance</span></a>
+and <a class="reference internal" href="tables/tables_W.html#tables-w02-job-titles-raw-parsed-label"><span class="std std-ref">W02_job_titles_raw_parsed</span></a>, respectively.</p>
+</section>
+<section id="e01-edu-main-parsed">
+<h3><span class="section-number">2.1.2. </span>E01_edu_main_parsed<a class="headerlink" href="#e01-edu-main-parsed" title="Permalink to this headline"></a></h3>
+<p>Similarly, a row in table <a class="reference internal" href="tables/tables_E.html#tables-e01-edu-main-parsed-label"><span class="std std-ref">E01_edu_main_parsed</span></a> can
+be read as:</p>
+<p><em>Person &lt;ind_id&gt; studied at &lt;org_id&gt; the program &lt;edu_prg_id&gt;, from &lt;edu_sy&gt;
+to &lt;edu_ey&gt;.</em></p>
+<p>Where the fields &lt;ind_id&gt;, &lt;org_id&gt; and &lt;edu_prg_id&gt; can be looked up in tables
+<a class="reference internal" href="tables/tables_F.html#tables-f01-founders-info-label"><span class="std std-ref">F01_founders_info</span></a>, <a class="reference internal" href="tables/tables_T.html#tables-t01-org-concordance-label"><span class="std std-ref">T01_org_concordance</span></a>
+and <a class="reference internal" href="tables/tables_E.html#tables-e03-edu-programs-label"><span class="std std-ref">E03_edu_programs</span></a>, respectively.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The fields &lt;org_id&gt;, &lt;jt_raw_id&gt; and &lt;edu_prg_id&gt; are missing for some rows.
+That is the case when the entrepreneur reported her employer but not the job
+role, or a job role but not the employer (e.g., ‘freelance’), or a university
+but not the study program.</p>
+</div>
+</section>
+</section>
+<section id="flat-tables">
+<h2><span class="section-number">2.2. </span>Flat tables<a class="headerlink" href="#flat-tables" title="Permalink to this headline"></a></h2>
+<p>Given the database structure, a typical analysis will involve combining and
+merging multiple tables. To reduce such initial building costs, and to
+facilitate initial data manipulation and exploration, we include a set of
+ready-to-use tables that already combine the essential fields and indicators.</p>
+<p>In the flat tables, <a class="reference internal" href="tables/tables_U.html#tables-u01-exp-flat-label"><span class="std std-ref">U01_exp_flat</span></a> and
+<a class="reference internal" href="tables/tables_U.html#tables-u02-edu-flat-label"><span class="std std-ref">U02_edu_flat</span></a>, a row represents an
+instance of an entrepreneur’s work or educational experience, respectively.
+Hence, each row contains an identifier for an entrepreneur, the organization that
+she founded or where she worked/studied, the job role or study program,
+the time spell and additional indicators whose construction would otherwise
+require to merge one or more tables.</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example:</p>
+<p>The rows of <a class="reference internal" href="tables/tables_W.html#tables-w01-exp-main-parsed-label"><span class="std std-ref">W01_exp_main_parsed</span></a>
+represent work experience entries. To know the entrepreneur name in any given
+row, this table must be merged with <a class="reference internal" href="tables/tables_F.html#tables-f01-founders-info-label"><span class="std std-ref">F01_founders_info</span></a>
+through the field <em>ind_id</em>. To query more complex data, such as the
+employer’s sector, the table must be merged:</p>
+<ol class="arabic simple">
+<li><p>with table <a class="reference internal" href="tables/tables_T.html#tables-t01-org-concordance-label"><span class="std std-ref">T01_org_concordance</span></a> through <em>org_id</em>, and</p></li>
+<li><p>with table <a class="reference internal" href="tables/tables_T.html#tables-t02-orbis-company-data-label"><span class="std std-ref">T02_orbis_company_data</span></a> through <em>bvd_id</em>.</p></li>
+</ol>
+<p>The flat tables already contain the results of such basic operations.</p>
+</div>
+<p>As well, the tables retain identifiers
+that can be used to append further indicators in the future.</p>
+</section>
+<section id="other-tables">
+<h2><span class="section-number">2.3. </span>Other tables<a class="headerlink" href="#other-tables" title="Permalink to this headline"></a></h2>
+<section id="u03-entrepreneur-dyads">
+<h3><span class="section-number">2.3.1. </span>U03_entrepreneur_dyads<a class="headerlink" href="#u03-entrepreneur-dyads" title="Permalink to this headline"></a></h3>
+<p>This table allows to explore the relationship between entrepreneurs’ shared past
+(e.g., same schooling, same employer, similar jobs, etc.) and the probability that
+they team up and co-found a start-up. To achieve this, the rows of
+<em>U03_entrepreneur_dyads</em> contain distinct dyads (i.e., pairs) of entrepreneurs.
+There are two types of dyads: observed and counterfactual. Observed dyads involve
+two entrepreneurs that teamed up and co-founded a start-up in a given year.
+By contrast, counterfactual dyads involve two entrepreneurs that founded two
+different start-ups in a given year (and hence are not co-founders). The
+rationale is that counterfactual dyads represent co-founding opportunities that
+could have taken place, but did not.</p>
+<p>Additionally, we narrow down the counterfactuals with additional restrictions.
+We define counterfactuals dyads as composed by pairs of entrepreneurs that,
+in a given year, founded different start-ups:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>in the same industry (using Crunchbase industry tags), or</p></li>
+<li><p>in the same sector (using the Orbis sector classification).</p></li>
+</ol>
+</div></blockquote>
+<p>To use the set of all real and counterfactual dyads, use all the rows of
+<em>U03_entrepreneur_dyads</em>. To limit the counterfactuals using the industry- or
+sector-based restriction you can filter rows where <em>counterf_same_industry==1</em> or
+<em>counterf_same_sector==1</em>.</p>
+<p>For reference, the number of <strong>real</strong> dyads is 329. The number of <strong>counterfactual</strong>
+dyads under the broadest definition (i.e., pairs of entrepreneurs who founded
+two different start-ups the same year) is 61,539. Using industry and sector
+definitions, the number of counterfactuals are 5,792 and 11,468, respectively.</p>
+<p><em>See</em> <a class="reference internal" href="tables/tables_U.html#tables-u03-entrepreneur-dyads-label"><span class="std std-ref">U03_entrepreneur_dyads</span></a> <em>for the content of the table</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that while nearly all start-ups have Crunchbase industry tags,
+not all companies in the Orbis dataset have a <em>sector</em>. Moreover, about 13%
+(n=159) of the start-ups in our dataset could not be matched to Orbis (e.g.,
+some Crunchbase-listed start-ups were not incorporated, some may not show up
+in Orbis due to their vintage and some may not be matched because their
+trade and incorporation names differ significantly or are different altogether).
+As a result, <em>sector</em> data is missing for 15% (n=186) start-ups and, by
+construction, counterfactual dyads involving these firms are automatically
+dropped under the sector-based definition.</p>
+</div>
+</section>
+</section>
+<section id="the-be-founders-dashboard">
+<h2><span class="section-number">2.4. </span>The <em>be_founders</em> dashboard<a class="headerlink" href="#the-be-founders-dashboard" title="Permalink to this headline"></a></h2>
+<p>We are working on a dashboard that allows to explore part of the existing tables
+and data. It is accessible <a class="reference external" href="https://befoundersdyads.herokuapp.com/">here</a>.</p>
+<div class="admonition-comments-and-suggestions admonition">
+<p class="admonition-title">Comments and suggestions?</p>
+<p>Have comments and suggestions about the dashboard, or ideas to improve
+it? Please send them to <a class="reference external" href="mailto:manuel&#46;gigena&#37;&#52;&#48;kuleuven&#46;be">manuel<span>&#46;</span>gigena<span>&#64;</span>kuleuven<span>&#46;</span>be</a></p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="1. The be_founders database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="methodology.html" class="btn btn-neutral float-right" title="3. Methodology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Manuel Gigena.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

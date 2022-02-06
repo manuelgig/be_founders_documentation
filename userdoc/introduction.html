@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. The be_founders database &mdash; be_founders 1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mystyle.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Quick start" href="quickstart.html" />
+    <link rel="prev" title="User Documentation" href="user_main.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> be_founders
+            <img src="../_static/logo-skema-blanc-og.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="user_main.html">User Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. The <em>be_founders</em> database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data">1.1. Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample">1.2. Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-structure">1.3. Database Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links-to-external-databases">1.4. Links to external databases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">2. Quick start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methodology.html">3. Methodology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tables.html">4. Description of tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql_main.html">5. Using the SQLite db</a></li>
+<li class="toctree-l2"><a class="reference internal" href="links.html">6. Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devdoc/dev_main.html">Developer Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">be_founders</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="user_main.html">User Documentation</a> &raquo;</li>
+      <li><span class="section-number">1. </span>The <em>be_founders</em> database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/userdoc/introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-be-founders-database">
+<h1><span class="section-number">1. </span>The <em>be_founders</em> database<a class="headerlink" href="#the-be-founders-database" title="Permalink to this headline"></a></h1>
+<section id="data">
+<span id="introdata-label"></span><h2><span class="section-number">1.1. </span>Data<a class="headerlink" href="#data" title="Permalink to this headline"></a></h2>
+<p>The database has rich and detailed information about a large sample of
+entrepreneurs who (co-)founded start-ups in Belgium. It contains information
+on three main areas:</p>
+<ol class="arabic simple">
+<li><p>Individual characteristics (name, gender, city, etc.)</p></li>
+<li><p>Education history:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Educational institution</p></li>
+<li><p>Study program</p></li>
+<li><p>Start/end date</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Work experience:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Employer / Start-up (co-)founded</p></li>
+<li><p>Job title</p></li>
+<li><p>Start/end date of the position</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sample">
+<span id="introsample-label"></span><h2><span class="section-number">1.2. </span>Sample<a class="headerlink" href="#sample" title="Permalink to this headline"></a></h2>
+<p>We built the sample in three steps. First, we obtained the list of all Belgian
+start-ups listed in Crunchbase, and retrieved their founders. Second, we collected
+information on the work and education history of the founders from the business
+directory LinkedIn. Third, we carefully parsed, cleaned and disambiguated the
+name-, work- and education-related fields (see <a class="reference internal" href="methodology.html#methodology-label"><span class="std std-numref">Section 3</span></a>,
+<em>Methodology</em>) in order to reduce the incidence of spelling variations and
+heterogeneity in entries referring to the same entity.</p>
+<p>After extensive cleaning and disambiguation, the sample covers 774 entrepreneurs
+which (co-)founded 1211 companies. As well, the dataset includes 6526 work
+experience entries (employer/founded firm + job title) and 2295 education
+entries (educational institution + study program).</p>
+</section>
+<section id="database-structure">
+<h2><span class="section-number">1.3. </span>Database Structure<a class="headerlink" href="#database-structure" title="Permalink to this headline"></a></h2>
+<p>We organized the database into separate tables. The current version (January
+2022) consists of 41 tables, whose names have the following format:</p>
+<p>&lt;N&gt;_&lt;xx&gt;_&lt;name&gt;</p>
+<p>where &lt;N&gt; is a letter that indicates the table’s <em>family</em>, &lt;xx&gt; a number and
+&lt;name&gt; is a unique string that reflects the table’s content. There are four
+<em>families</em> (with their respective leading letter in parentheses):</p>
+<ul class="simple">
+<li><p>Raw data (R)</p></li>
+<li><p>Founders’ information (F)</p></li>
+<li><p>Educational background (E)</p></li>
+<li><p>Work history (W)</p></li>
+<li><p>Ready-to-use (U)</p></li>
+<li><p>Other tables (T)</p></li>
+</ul>
+<p>As usual, the tables contain id’s (one or more, local/foreign) that allow to link them to each
+other. See <a class="reference internal" href="tables.html#tables-label"><span class="std std-numref">Section 4</span></a> (<em>Tables</em>) for a complete list of the tables
+and their contents.</p>
+<p>All tables are located in the folder <em>‘./04_tables’</em>, in csv format.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>be_founders</em> will soon be available as a self-contained SQLite
+database engine.</p>
+</div>
+</section>
+<section id="links-to-external-databases">
+<h2><span class="section-number">1.4. </span>Links to external databases<a class="headerlink" href="#links-to-external-databases" title="Permalink to this headline"></a></h2>
+<p>To disambiguate each field we used libraries and dictionaries of <em>clean</em> names
+from external databases (e.g., lists of company names, university names, job
+titles). Besides helping with the harmonization step, such lists allowed us to
+link our data to external data sources. <a class="reference internal" href="#table1-label"><span class="std std-numref">Table 1.1</span></a> below illustrates
+the database’s key fields and the external source we matched them to.</p>
+<span id="table1-label"></span><table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Table 1.1 </span><span class="caption-text">Field linking and mapping</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 37%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p>Field</p></th>
+<th class="head" rowspan="2"><p>Parsed/</p>
+<p>cleaned</p>
+</th>
+<th class="head" rowspan="2"><p>Disamb.</p></th>
+<th class="head" rowspan="2"><p>Linked to:</p>
+<p><em>db name + (id)</em></p>
+</th>
+<th class="head" rowspan="2"><p>Mapped into</p></th>
+</tr>
+<tr class="row-even"></tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td rowspan="2"><p>Person name</p></td>
+<td rowspan="2"><p>Yes</p></td>
+<td rowspan="2"><p>Yes</p></td>
+<td rowspan="2"><p>Crunchbase (cb_person_uuid),</p>
+<p>LinkedIn (permalink)</p>
+</td>
+<td rowspan="2"></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="4"><p>School/</p>
+<p>university name</p>
+</td>
+<td rowspan="4"><p>Yes</p></td>
+<td rowspan="4"><p>Yes</p></td>
+<td rowspan="4"><p>Orbis (bvd_id, duo_bvd_id,</p>
+<p>guo_bvd_id), ETER (id),</p>
+<p>Carnegie classification
+(UNITID),</p>
+<p>Webometrics (string name)
+<sup>1</sup></p>
+</td>
+<td rowspan="4"></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2"><p>Study program</p></td>
+<td rowspan="2"><p>Yes
+<sup>2</sup></p></td>
+<td rowspan="2"><p>Yes</p></td>
+<td rowspan="2"></td>
+<td rowspan="2"><p>ISCED levels and</p>
+<p>classification</p>
+</td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="4"><p>Company name</p></td>
+<td rowspan="4"><p>Yes</p></td>
+<td rowspan="4"><p>Yes</p></td>
+<td rowspan="4"><p>Crunchbase (org_uuid),</p>
+<p>Orbis (bvd_id, duo_bvd_id,</p>
+<p>guo_bvd_id), Compustat (gvkey),</p>
+<p>CRSP (permno, permco, CUSIP)</p>
+</td>
+<td rowspan="4"></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="2"><p>Job title</p></td>
+<td rowspan="2"><p>Yes</p></td>
+<td rowspan="2"><p>Yes</p></td>
+<td rowspan="2"><p>O*NET (O*NET-SOC code)</p></td>
+<td rowspan="2"><p>Functional
+areas, <sup>3</sup></p>
+<p>job ranks <sup>4</sup></p>
+</td>
+</tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
+<p>Notes:  <sup>1</sup> Webometrics data does not provide a unique identifier;
+<sup>2</sup> we cleaned the strings, but parsed only the study type (e.g. bsc, msc, phd, etc.);
+<sup>3</sup> e.g. business and marketing, R&amp;D and engineering, etc.;
+<sup>4</sup> e.g. top management, sub-management, non-management</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user_main.html" class="btn btn-neutral float-left" title="User Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="2. Quick start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Manuel Gigena.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

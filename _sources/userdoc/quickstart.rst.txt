@@ -1,0 +1,137 @@
+.. _quickstart-label:
+
+Quick start
+===========
+
+*Please go quickly over* :numref:`introdata-label` *(Data) and*
+:numref:`introsample-label` *(Sample) before you proceed with this section.*
+
+Parsed tables
+-------------
+
+Tables :ref:`tables-W01_exp_main_parsed-label` and
+:ref:`tables-E01_edu_main_parsed-label` are the main tables in the database. They
+relate the id's of each entrepreneur to the companies where they worked (as
+founders and/or employees) and their job title, as well as the educational
+institutions they attended and the programs studied there. As well, these tables
+list the starting and ending date at each place.
+
+W01_exp_main_parsed
+^^^^^^^^^^^^^^^^^^^
+
+A row in table :ref:`tables-W01_exp_main_parsed-label` can be read as:
+
+*Person <ind_id> worked for firm <org_id> in a role described by <jt_raw_id>,
+from <exp_sy> to <exp_ey>.*
+
+Where the fields <ind_id>, <org_id> and <jt_raw_id> can be looked up in tables
+:ref:`tables-F01_founders_info-label`, :ref:`tables-T01_org_concordance-label`
+and :ref:`tables-W02_job_titles_raw_parsed-label`, respectively.
+
+E01_edu_main_parsed
+^^^^^^^^^^^^^^^^^^^
+
+Similarly, a row in table :ref:`tables-E01_edu_main_parsed-label` can
+be read as:
+
+*Person <ind_id> studied at <org_id> the program <edu_prg_id>, from <edu_sy>
+to <edu_ey>.*
+
+Where the fields <ind_id>, <org_id> and <edu_prg_id> can be looked up in tables
+:ref:`tables-F01_founders_info-label`, :ref:`tables-T01_org_concordance-label`
+and :ref:`tables-E03_edu_programs-label`, respectively.
+
+.. note::
+  The fields <org_id>, <jt_raw_id> and <edu_prg_id> are missing for some rows.
+  That is the case when the entrepreneur reported her employer but not the job
+  role, or a job role but not the employer (e.g., 'freelance'), or a university
+  but not the study program.
+
+Flat tables
+-----------
+
+Given the database structure, a typical analysis will involve combining and
+merging multiple tables. To reduce such initial building costs, and to
+facilitate initial data manipulation and exploration, we include a set of
+ready-to-use tables that already combine the essential fields and indicators.
+
+In the flat tables, :ref:`tables-U01_exp_flat-label` and
+:ref:`tables-U02_edu_flat-label`, a row represents an
+instance of an entrepreneur's work or educational experience, respectively.
+Hence, each row contains an identifier for an entrepreneur, the organization that
+she founded or where she worked/studied, the job role or study program,
+the time spell and additional indicators whose construction would otherwise
+require to merge one or more tables.
+
+.. admonition:: Example:
+
+  The rows of :ref:`tables-W01_exp_main_parsed-label`
+  represent work experience entries. To know the entrepreneur name in any given
+  row, this table must be merged with :ref:`tables-F01_founders_info-label`
+  through the field *ind_id*. To query more complex data, such as the
+  employer's sector, the table must be merged:
+
+  #. with table :ref:`tables-T01_org_concordance-label` through *org_id*\, and
+  #. with table :ref:`tables-T02_orbis_company_data-label` through *bvd_id*\.
+
+  The flat tables already contain the results of such basic operations.
+
+As well, the tables retain identifiers
+that can be used to append further indicators in the future.
+
+Other tables
+------------
+
+U03_entrepreneur_dyads
+^^^^^^^^^^^^^^^^^^^^^^
+
+This table allows to explore the relationship between entrepreneurs' shared past
+(e.g., same schooling, same employer, similar jobs, etc.) and the probability that
+they team up and co-found a start-up. To achieve this, the rows of
+*U03_entrepreneur_dyads* contain distinct dyads (i.e., pairs) of entrepreneurs.
+There are two types of dyads: observed and counterfactual. Observed dyads involve
+two entrepreneurs that teamed up and co-founded a start-up in a given year.
+By contrast, counterfactual dyads involve two entrepreneurs that founded two
+different start-ups in a given year (and hence are not co-founders). The
+rationale is that counterfactual dyads represent co-founding opportunities that
+could have taken place, but did not.
+
+Additionally, we narrow down the counterfactuals with additional restrictions.
+We define counterfactuals dyads as composed by pairs of entrepreneurs that,
+in a given year, founded different start-ups:
+
+ #. in the same industry (using Crunchbase industry tags), or
+ #. in the same sector (using the Orbis sector classification).
+
+To use the set of all real and counterfactual dyads, use all the rows of
+*U03_entrepreneur_dyads*. To limit the counterfactuals using the industry- or
+sector-based restriction you can filter rows where *counterf_same_industry==1* or
+*counterf_same_sector==1*\.
+
+For reference, the number of **real** dyads is 329. The number of **counterfactual**
+dyads under the broadest definition (i.e., pairs of entrepreneurs who founded
+two different start-ups the same year) is 61,539. Using industry and sector
+definitions, the number of counterfactuals are 5,792 and 11,468, respectively.
+
+*See* :ref:`tables-U03_entrepreneur_dyads-label` *for the content of the table*
+
+.. warning:: Please note that while nearly all start-ups have Crunchbase industry tags,
+  not all companies in the Orbis dataset have a *sector*. Moreover, about 13%
+  (n=159) of the start-ups in our dataset could not be matched to Orbis (e.g.,
+  some Crunchbase-listed start-ups were not incorporated, some may not show up
+  in Orbis due to their vintage and some may not be matched because their
+  trade and incorporation names differ significantly or are different altogether).
+  As a result, *sector* data is missing for 15% (n=186) start-ups and, by
+  construction, counterfactual dyads involving these firms are automatically
+  dropped under the sector-based definition.
+
+The *be_founders* dashboard
+---------------------------
+
+We are working on a dashboard that allows to explore part of the existing tables
+and data. It is accessible `here <https://befoundersdyads.herokuapp.com/>`_.
+
+.. admonition:: Comments and suggestions?
+
+  Have comments and suggestions about the dashboard, or ideas to improve
+  it? Please send them to manuel.gigena@kuleuven.be
