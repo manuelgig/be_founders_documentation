@@ -62,6 +62,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../devdoc/dev_main.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -168,12 +169,14 @@ they team up and co-found a start-up. To achieve this, the rows of
 There are two types of dyads: observed and counterfactual. Observed dyads involve
 two entrepreneurs that teamed up and co-founded a start-up in a given year.
 By contrast, counterfactual dyads involve two entrepreneurs that founded two
-different start-ups in a given year (and hence are not co-founders). The
+different start-ups within a three-year period (and hence are not co-founders). The
 rationale is that counterfactual dyads represent co-founding opportunities that
 could have taken place, but did not.</p>
-<p>Additionally, we narrow down the counterfactuals with additional restrictions.
-We define counterfactuals dyads as composed by pairs of entrepreneurs that,
-in a given year, founded different start-ups:</p>
+<p>We introduce additional variables to narrow down the counterfactuals set by
+imposing other restrictions. Variables <em>counterf_win_2yr</em> and <em>counterf_win_1yr</em>
+are dummies that indicate whether the startups in a dyad were founded within
+a two-year or a one-year period, respectively.</p>
+<p>Additionally, we identify start-ups:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>in the same industry (using Crunchbase industry tags), or</p></li>
@@ -181,14 +184,16 @@ in a given year, founded different start-ups:</p>
 </ol>
 </div></blockquote>
 <p>To use the set of all real and counterfactual dyads, use all the rows of
-<em>U03_entrepreneur_dyads</em>. To limit the counterfactuals using the industry- or
-sector-based restriction you can filter rows where <em>counterf_same_industry==1</em> or
-<em>counterf_same_sector==1</em>.</p>
+<em>U03_entrepreneur_dyads</em>. To limit the counterfactuals using time window,
+industry- and/or sector-based restriction you can filter rows where
+<em>counterf_same_industry==1</em>, <em>counterf_same_sector==1</em>, or <em>counterf_win_Xyr==1</em>.</p>
+<p>If you use industry and/or sector indicators, please pay attention
+to the warning box below.</p>
 <p>For reference, the number of <strong>real</strong> dyads is 329. The number of <strong>counterfactual</strong>
 dyads under the broadest definition (i.e., pairs of entrepreneurs who founded
 two different start-ups the same year) is 61,539. Using industry and sector
 definitions, the number of counterfactuals are 5,792 and 11,468, respectively.</p>
-<p><em>See</em> <a class="reference internal" href="tables/tables_U.html#tables-u03-entrepreneur-dyads-label"><span class="std std-ref">U03_entrepreneur_dyads</span></a> <em>for the content of the table</em></p>
+<p><em>See</em> <a class="reference internal" href="tables/tables_U.html#tables-u03-entrepreneur-dyads-label"><span class="std std-ref">U03_entrepreneur_dyads</span></a> <em>for the content of the table</em>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please note that while nearly all start-ups have Crunchbase industry tags,
@@ -200,6 +205,10 @@ trade and incorporation names differ significantly or are different altogether).
 As a result, <em>sector</em> data is missing for 15% (n=186) start-ups and, by
 construction, counterfactual dyads involving these firms are automatically
 dropped under the sector-based definition.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We assume all work/study entries without an end year are still ongoing.</p>
 </div>
 </section>
 </section>

@@ -393,12 +393,55 @@ fulfilled:
 .. warning::
 
   Some entrepreneurs who attended an accelerator program list them as work experience,
-  while others as education. To harmonize, we reclassified all accerelator-related
+  while others as education. To harmonize, we reclassified all accelerator-related
   entries as work experience.
 
 .. note::
 
   A copy of the dictionary we used in this step is available in
   './03_params/parse_edu_isced_fields_curr.xlsx'.
+
+Other variables
+===============
+
+Age
+---
+
+We use disambiguated schooling data to estimate entrepreneurs' birth years and
+derive the age at the time of work experience, education and cofounding. In this step we
+combine information from the study level and the starting or ending year of
+each entry in the education table. First, for each education entry with ISCED level
+and at least start or end year of education program, we used the mapping rule in table
+:numref:`table-other_vars_age-label` to estimate the birth year of the entrepreneur.
+For example, if Jane started secondary school in 2005, we estimate she was
+12 at the time, and impute a birth year of 1993. Second, if an entrepreneur has many
+education entries in the education table, this step may produce different
+estimates of birth year. In such case, we take the minimum of all estimated
+birth years of each entrepreneur. Third, we combined the (minimum) estimated
+birth year and the cofounding year to estimate the age of the entrepreneur
+at the moment of cofounding a firm.
+
+.. _table-other_vars_age-label:
+
+.. table:: Mapping rule to estimate an entrepreneur's birth year
+
+  +-----------------------------+-----------+---------+
+  | Study level                 | Start age | End age |
+  +=============================+===========+=========+
+  | Primary school              | 6         | 11      |
+  +-----------------------------+-----------+---------+
+  | Secondary school            | 12        | 18      |
+  +-----------------------------+-----------+---------+
+  | Post secondary (tertiary)   | 19        | 21      |
+  +-----------------------------+-----------+---------+
+  | Bachelor's degree           | 19        | 21      |
+  +-----------------------------+-----------+---------+
+  | Master's degree             | 22        | 23      |
+  +-----------------------------+-----------+---------+
+  | Doctoral degree             | 25        | N/A     |
+  +-----------------------------+-----------+---------+
+
+Age
+---
 
 .. bibliography::

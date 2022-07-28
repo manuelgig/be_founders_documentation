@@ -92,28 +92,34 @@ they team up and co-found a start-up. To achieve this, the rows of
 There are two types of dyads: observed and counterfactual. Observed dyads involve
 two entrepreneurs that teamed up and co-founded a start-up in a given year.
 By contrast, counterfactual dyads involve two entrepreneurs that founded two
-different start-ups in a given year (and hence are not co-founders). The
+different start-ups within a three-year period (and hence are not co-founders). The
 rationale is that counterfactual dyads represent co-founding opportunities that
 could have taken place, but did not.
 
-Additionally, we narrow down the counterfactuals with additional restrictions.
-We define counterfactuals dyads as composed by pairs of entrepreneurs that,
-in a given year, founded different start-ups:
+We introduce additional variables to narrow down the counterfactuals set by
+imposing other restrictions. Variables *counterf_win_2yr* and *counterf_win_1yr*
+are dummies that indicate whether the startups in a dyad were founded within
+a two-year or a one-year period, respectively.
+
+Additionally, we identify start-ups:
 
  #. in the same industry (using Crunchbase industry tags), or
  #. in the same sector (using the Orbis sector classification).
 
 To use the set of all real and counterfactual dyads, use all the rows of
-*U03_entrepreneur_dyads*. To limit the counterfactuals using the industry- or
-sector-based restriction you can filter rows where *counterf_same_industry==1* or
-*counterf_same_sector==1*\.
+*U03_entrepreneur_dyads*. To limit the counterfactuals using time window,
+industry- and/or sector-based restriction you can filter rows where
+*counterf_same_industry==1*, *counterf_same_sector==1*, or *counterf_win_Xyr==1*\.
+
+If you use industry and/or sector indicators, please pay attention
+to the warning box below.
 
 For reference, the number of **real** dyads is 329. The number of **counterfactual**
 dyads under the broadest definition (i.e., pairs of entrepreneurs who founded
 two different start-ups the same year) is 61,539. Using industry and sector
 definitions, the number of counterfactuals are 5,792 and 11,468, respectively.
 
-*See* :ref:`tables-U03_entrepreneur_dyads-label` *for the content of the table*
+*See* :ref:`tables-U03_entrepreneur_dyads-label` *for the content of the table*\.
 
 .. warning:: Please note that while nearly all start-ups have Crunchbase industry tags,
   not all companies in the Orbis dataset have a *sector*. Moreover, about 13%
@@ -124,6 +130,8 @@ definitions, the number of counterfactuals are 5,792 and 11,468, respectively.
   As a result, *sector* data is missing for 15% (n=186) start-ups and, by
   construction, counterfactual dyads involving these firms are automatically
   dropped under the sector-based definition.
+
+.. warning:: We assume all work/study entries without an end year are still ongoing.
 
 The *be_founders* dashboard
 ---------------------------

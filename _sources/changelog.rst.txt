@@ -1,0 +1,28 @@
+#########
+Changelog
+#########
+
++----------+-----------+-------------------------------------------------------------------+
+| Version  | Date      | Content / Updates                                                 |
++==========+===========+===================================================================+
+| 1.0      | Jan 2022  | First release                                                     |
++----------+-----------+-------------------------------------------------------------------+
+| 1.1      | June 2022 | Added *byear_min*, *last_exp_shared*, *age_left*,                 |
+|          |           | *age_right*, *same_study_time* and *same_work_time*.              |
++          +           +-------------------------------------------------------------------+
+|          |           | Fixed *cofounders* in U03_entrepreneur_dyads                      |
+|          |           | (calculated as the max across ind_id_left-ind_id_right-org_id).   |
++          +           +-------------------------------------------------------------------+
+|          |           | Changelog added.                                                  |
++          +           +-------------------------------------------------------------------+
+|          |           | Retargeted *Documentation* shortcut in root dir to local doc      |
+|          |           | files (target was doc files hosted on GitHub before).             |
++----------+-----------+-------------------------------------------------------------------+
+| 1.2      | July 2022 | Created a new baseline for counterfactuals (startups cofounded)   |
+|          |           | within a 3-year period, and added indicators for within 2-years   |
+|          |           | and within 1-year                                                 |
++          +           +-------------------------------------------------------------------+
+|          |           | Added variables for founder market size                           |
++          +           +-------------------------------------------------------------------+
+|          |           | Added table with number of (co)founders per firm                  |
++----------+-----------+-------------------------------------------------------------------+

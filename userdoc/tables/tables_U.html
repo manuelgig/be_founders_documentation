@@ -39,6 +39,7 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user_main.html">User Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../devdoc/dev_main.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -161,6 +162,10 @@
 <td><p>float64</p></td>
 <td><p>The first (min) year when the entrepreneur worked as owner/founder of the org_id</p></td>
 </tr>
+<tr class="row-even"><td><p>byear_min</p></td>
+<td><p>float64</p></td>
+<td><p>Birth year (estimated)</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -236,6 +241,10 @@
 <td><p>string</p></td>
 <td><p>Study program’s ISCED field</p></td>
 </tr>
+<tr class="row-even"><td><p>byear_min</p></td>
+<td><p>float64</p></td>
+<td><p>Birth year (estimated)</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -267,21 +276,45 @@
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right co-founded a firm and 0 otherwise</p></td>
 </tr>
-<tr class="row-odd"><td><p>min_founding_year</p></td>
-<td><p>float64</p></td>
-<td><p>Founding year of the co-founded firm (if cofounders=1)</p></td>
-</tr>
-<tr class="row-even"><td><p>cofounded_org_id</p></td>
+<tr class="row-odd"><td><p>org_id_left</p></td>
 <td><p>string</p></td>
-<td><p>Id of the co-founded firm (if cofounders=1)</p></td>
+<td><p>Org_id of the organization founded by ind_id_left</p></td>
 </tr>
-<tr class="row-odd"><td><p>counterf_same_industry</p></td>
+<tr class="row-even"><td><p>org_id_right</p></td>
+<td><p>string</p></td>
+<td><p>Org_id of the organization founded by ind_id_right</p></td>
+</tr>
+<tr class="row-odd"><td><p>min_founding_year_left</p></td>
+<td><p>int64</p></td>
+<td><p>Minimum (earliest) founding year of the organization founded by ind_id_left</p></td>
+</tr>
+<tr class="row-even"><td><p>min_founding_year_right</p></td>
+<td><p>int64</p></td>
+<td><p>Minimum (earliest) founding year of the organization founded by ind_id_right</p></td>
+</tr>
+<tr class="row-odd"><td><p>min_founding_year_both</p></td>
+<td><p>int64</p></td>
+<td><p>Minimum between min_founding_year_left and min_founding_year_right</p></td>
+</tr>
+<tr class="row-even"><td><p>counterf_win_1yr</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if both organizations were founded within a period of 1 year</p></td>
+</tr>
+<tr class="row-odd"><td><p>counterf_win_2yr</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if both organizations were founded within a period of 2 year</p></td>
+</tr>
+<tr class="row-even"><td><p>counterf_same_industry</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 for rows where cofounders=1 OR for counterfactual dyads in the same industry-year (see text)</p></td>
 </tr>
-<tr class="row-even"><td><p>bvd_sector_id</p></td>
-<td><p>string</p></td>
-<td><p>Organization sector id (Orbis)</p></td>
+<tr class="row-odd"><td><p>mkt_size_left</p></td>
+<td><p>float64</p></td>
+<td><p>Founders’ “market size”: The number of distinct startups founded in the same industries of org_id_left and in the same min_founding_year_left</p></td>
+</tr>
+<tr class="row-even"><td><p>mkt_size_right</p></td>
+<td><p>float64</p></td>
+<td><p>Founders’ “market size”: The number of distinct startups founded in the same industries of org_id_right and in the same min_founding_year_right</p></td>
 </tr>
 <tr class="row-odd"><td><p>counterf_same_sector</p></td>
 <td><p>dummy</p></td>
@@ -291,13 +324,13 @@
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left has prior work experience and 0 otherwise</p></td>
 </tr>
-<tr class="row-odd"><td><p>has_exp_both</p></td>
-<td><p>string</p></td>
-<td><p>Number of entrepreneurs in the dyad that have prior experience: equals ‘one’ if only one entrepreneur has, ‘both’ if both have it and ‘none’ if no one has</p></td>
-</tr>
-<tr class="row-even"><td><p>has_exp_right</p></td>
+<tr class="row-odd"><td><p>has_exp_right</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_right has prior work experience and 0 otherwise</p></td>
+</tr>
+<tr class="row-even"><td><p>has_exp_both</p></td>
+<td><p>string</p></td>
+<td><p>Number of entrepreneurs in the dyad that have prior experience: equals ‘one’ if only one entrepreneur has, ‘both’ if both have it and ‘none’ if no one has</p></td>
 </tr>
 <tr class="row-odd"><td><p>same_org</p></td>
 <td><p>dummy</p></td>
@@ -345,7 +378,7 @@
 </tr>
 <tr class="row-even"><td><p>same_edu_time</p></td>
 <td><p>dummy</p></td>
-<td><p>Equals 1 if ind_id_left and ind_id_right worked studied at the same institution in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
+<td><p>Equals 1 if ind_id_left and ind_id_right studied at the same institution in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
 </tr>
 <tr class="row-odd"><td><p>same_isced_field</p></td>
 <td><p>dummy</p></td>
@@ -354,6 +387,26 @@
 <tr class="row-even"><td><p>same_isced_field_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right studied programs in the same ISCED field in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
+</tr>
+<tr class="row-odd"><td><p>same_study_time</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if the spells wherein both entrepreneurs attained education (at any level, in any organization) overlap in at least one year.</p></td>
+</tr>
+<tr class="row-even"><td><p>same_work_time</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if the spells wherein both entrepreneurs worked (for any company, in any role) overlap in at least one year.</p></td>
+</tr>
+<tr class="row-odd"><td><p>last_exp_shared</p></td>
+<td><p>string</p></td>
+<td><p>For entrepreneur dyads who shared an employer in the past (same_org=1), this variable indicates whether the shared employer was the last working experience prior to cofounding (real or counterfactual) —i.e., the entrepreneur had no other job between the shared one and the cofounded firm. Values are: ‘both’ if the entrepreneurs in the dayd had no other work experience between the shared one and the cofounding; ‘left’ (‘right’) if only the left (right) entrepreneur had no other work experience between the shared one and the cofounding; and ‘none’ if for no entrepreneur the shared experience was the last one prior to cofounding.</p></td>
+</tr>
+<tr class="row-even"><td><p>age_left</p></td>
+<td><p>float64</p></td>
+<td><p>Age of the left entrepreneur, ind_id_left, at the time of cofounding (real or counterfactual)</p></td>
+</tr>
+<tr class="row-odd"><td><p>age_right</p></td>
+<td><p>float64</p></td>
+<td><p>Age of the right entrepreneur, ind_id_right, at the time of cofounding (real or counterfactual)</p></td>
 </tr>
 </tbody>
 </table>

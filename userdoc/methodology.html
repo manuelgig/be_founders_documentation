@@ -48,6 +48,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#cleaning-raw-strings">3.2.1. Cleaning raw strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#string-disambiguation">3.2.2. String disambiguation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#creating-categorical-variables-from-job-titles-and-study-programs">3.2.3. Creating categorical variables from job titles and study programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-variables">3.2.4. Other variables</a></li>
 </ul>
 </li>
 </ul>
@@ -58,6 +59,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../devdoc/dev_main.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -123,8 +125,8 @@ match them to relevant external databases (see
 <a class="reference internal" href="#table-raw-parsed-label"><span class="std std-numref">Table 3.1</span></a> below shows the correspondences between the raw
 fields of <a class="reference internal" href="tables/tables_F.html#tables-f01-founders-info-label"><span class="std std-ref">F01_founders_info</span></a>, <a class="reference internal" href="tables/tables_R.html#tables-r02-edu-source-label"><span class="std std-ref">R02_edu_source</span></a>
 and <a class="reference internal" href="tables/tables_R.html#tables-r03-exp-source-label"><span class="std std-ref">R03_exp_source</span></a> and parsed fields in the main tables.</p>
-<span id="table-raw-parsed-label"></span><table class="docutils align-default" id="id7">
-<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data: from raw to parsed fields</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<span id="table-raw-parsed-label"></span><table class="docutils align-default" id="id8">
+<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Data: from raw to parsed fields</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 22%" />
@@ -363,7 +365,7 @@ and we reclassified them as education.</p>
 <h3><span class="section-number">3.2.3. </span>Creating categorical variables from job titles and study programs<a class="headerlink" href="#creating-categorical-variables-from-job-titles-and-study-programs" title="Permalink to this headline"></a></h3>
 <section id="job-titles">
 <h4><span class="section-number">3.2.3.1. </span>Job titles<a class="headerlink" href="#job-titles" title="Permalink to this headline"></a></h4>
-<p>We followed the methodology in <span id="id1">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> to classify the parsed
+<p>We followed the methodology in <span id="id1">Chen and Thompson [<a class="reference internal" href="#id7" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> to classify the parsed
 job titles into:</p>
 <ul class="simple">
 <li><p>Job ranks: top management, management, sub-management and non-management</p></li>
@@ -389,7 +391,7 @@ Hence, tables <a class="reference internal" href="tables/tables_W.html#tables-w0
 to the classifications assigned following the procedure in this section.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We used the dictionary provided by <span id="id2">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and expanded it with
+<p>We used the dictionary provided by <span id="id2">Chen and Thompson [<a class="reference internal" href="#id7" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and expanded it with
 new terms after careful examination of the job title string in our database. A
 copy of the dictionary we used in this step is available in
 ‘./03_params/parse_jt_job_ranks_funct_areas_curr.xlsx’.</p>
@@ -410,11 +412,11 @@ to the level of the study program (e.g., ‘master’ -&gt; ‘msc’, ‘Ph. d.
 The harmonized strings are stored as <em>edu_prg_parsed</em> in table
 <a class="reference internal" href="tables/tables_E.html#tables-e03-edu-programs-label"><span class="std std-ref">E03_edu_programs</span></a>.</p>
 <p><strong>Levels of education.</strong> We adapted the methodology in
-<span id="id3">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words that relate to <a class="reference external" href="https://circabc.europa.eu/sd/a/84d88f97-9cc7-45be-963f-ed088440b04b/ISCED%202011%20Operational%20Manual.pdf">ISCED levels of education</a>.
+<span id="id3">Chen and Thompson [<a class="reference internal" href="#id7" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words that relate to <a class="reference external" href="https://circabc.europa.eu/sd/a/84d88f97-9cc7-45be-963f-ed088440b04b/ISCED%202011%20Operational%20Manual.pdf">ISCED levels of education</a>.
 ISCED 2011 has nine levels of educations, from level 0 to 8. We collapsed them
 into 6 different categories according to <a class="reference internal" href="#table-isced-levels-label"><span class="std std-numref">Table 3.2</span></a>.</p>
-<span id="table-isced-levels-label"></span><table class="docutils align-default" id="id8">
-<caption><span class="caption-number">Table 3.2 </span><span class="caption-text">Table: Correspondence with ISCED levels</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<span id="table-isced-levels-label"></span><table class="docutils align-default" id="id9">
+<caption><span class="caption-number">Table 3.2 </span><span class="caption-text">Table: Correspondence with ISCED levels</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 48%" />
 <col style="width: 52%" />
@@ -471,7 +473,7 @@ education-related ones.</p>
 <p><strong>Fields of education.</strong> We classified the study programs into the fields of study defined in the
 <a class="reference external" href="https://circabc.europa.eu/sd/a/286ebac6-aa7c-4ada-a42b-ff2cf3a442bf/ISCED-F%202013%20-%20Detailed%20field%20descriptions.pdf">ISCED-F 2013 taxonomy</a>.
 (see table <a class="reference internal" href="tables/tables_E.html#tables-e06-isced-fields-defs-label"><span class="std std-ref">E06_isced_fields_defs</span></a>). As before, we adapted the
-methodology in <span id="id4">Chen and Thompson [<a class="reference internal" href="#id6" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words and tokens
+methodology in <span id="id4">Chen and Thompson [<a class="reference internal" href="#id7" title="Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. Entrepreneurship Theory and Practice, 40(2):289–305, 2016.">CT16</a>]</span> and created lists of words and tokens
 that relate to the study fields. The starting point of our word list was the
 <em>Appendix II: Numerical Code List</em> from the ISCED-F2013 report, which provides
 about 1,200 study programs that belong to the fields of
@@ -487,7 +489,7 @@ fulfilled:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Some entrepreneurs who attended an accelerator program list them as work experience,
-while others as education. To harmonize, we reclassified all accerelator-related
+while others as education. To harmonize, we reclassified all accelerator-related
 entries as work experience.</p>
 </div>
 <div class="admonition note">
@@ -495,8 +497,70 @@ entries as work experience.</p>
 <p>A copy of the dictionary we used in this step is available in
 ‘./03_params/parse_edu_isced_fields_curr.xlsx’.</p>
 </div>
-<p id="id5"><dl class="citation">
-<dt class="label" id="id6"><span class="brackets">CT16</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>)</span></dt>
+</section>
+</section>
+<section id="other-variables">
+<h3><span class="section-number">3.2.4. </span>Other variables<a class="headerlink" href="#other-variables" title="Permalink to this headline"></a></h3>
+<section id="age">
+<h4><span class="section-number">3.2.4.1. </span>Age<a class="headerlink" href="#age" title="Permalink to this headline"></a></h4>
+<p>We use disambiguated schooling data to estimate entrepreneurs’ birth years and
+derive the age at the time of work experience, education and cofounding. In this step we
+combine information from the study level and the starting or ending year of
+each entry in the education table. First, for each education entry with ISCED level
+and at least start or end year of education program, we used the mapping rule in table
+<a class="reference internal" href="#table-other-vars-age-label"><span class="std std-numref">Table 3.3</span></a> to estimate the birth year of the entrepreneur.
+For example, if Jane started secondary school in 2005, we estimate she was
+12 at the time, and impute a birth year of 1993. Second, if an entrepreneur has many
+education entries in the education table, this step may produce different
+estimates of birth year. In such case, we take the minimum of all estimated
+birth years of each entrepreneur. Third, we combined the (minimum) estimated
+birth year and the cofounding year to estimate the age of the entrepreneur
+at the moment of cofounding a firm.</p>
+<span id="table-other-vars-age-label"></span><table class="docutils align-default" id="id10">
+<caption><span class="caption-number">Table 3.3 </span><span class="caption-text">Mapping rule to estimate an entrepreneur’s birth year</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 22%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Study level</p></th>
+<th class="head"><p>Start age</p></th>
+<th class="head"><p>End age</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Primary school</p></td>
+<td><p>6</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>Secondary school</p></td>
+<td><p>12</p></td>
+<td><p>18</p></td>
+</tr>
+<tr class="row-even"><td><p>Post secondary (tertiary)</p></td>
+<td><p>19</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bachelor’s degree</p></td>
+<td><p>19</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-even"><td><p>Master’s degree</p></td>
+<td><p>22</p></td>
+<td><p>23</p></td>
+</tr>
+<tr class="row-odd"><td><p>Doctoral degree</p></td>
+<td><p>25</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h4><span class="section-number">3.2.4.2. </span>Age<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h4>
+<p id="id6"><dl class="citation">
+<dt class="label" id="id7"><span class="brackets">CT16</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>)</span></dt>
 <dd><p>Li-Wei Chen and Peter Thompson. Skill balance and entrepreneurship evidence from online career histories. <em>Entrepreneurship Theory and Practice</em>, 40(2):289–305, 2016.</p>
 </dd>
 </dl>

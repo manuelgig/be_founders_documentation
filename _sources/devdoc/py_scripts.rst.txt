@@ -4,7 +4,7 @@ The Python files & code
 .. danger ::
 
   We strongly suggest that you contact the db creator
-  (manuel.gigena@kuleuven.be) prior to modifying the *.py* files. 
+  (manuel.gigena@kuleuven.be) prior to modifying the *.py* files.
 
 We used python to build the database. All scripts are located in the
 folder named *./00_py_scripts*, and we wrote separate scripts for each part of
@@ -35,10 +35,11 @@ execute them in the following order:
 #. S09_make_tables
 #. S14_make_dyads_tables
 #. S15_make_documentation_tables
+#. S16_ext_1
 
 .. admonition :: Updating the complete db
 
   The complete db, tables and documentation can be updated at once running
-  the *S16_make_be_founders_db.py* file. This executes the *.py* files in the right
+  the *S17_make_be_founders_db.py* file. This executes the *.py* files in the right
   order and with their parameters set at their default value (e.g., the
   thresholds for the fuzzy matching).

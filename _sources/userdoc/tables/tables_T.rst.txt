@@ -257,3 +257,16 @@ T20_entrepreneur_dyads_sectors
    :delim: ;
    :widths: 8, 4, 20
    :header-rows: 1
+
+
+
+.. _tables-T21_cofounders_count-label:
+
+T21_cofounders_count
+^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T21_cofounders_count
+   :file: T21_cofounders_count.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
