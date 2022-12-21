@@ -400,13 +400,21 @@
 <td><p>string</p></td>
 <td><p>For entrepreneur dyads who shared an employer in the past (same_org=1), this variable indicates whether the shared employer was the last working experience prior to cofounding (real or counterfactual) —i.e., the entrepreneur had no other job between the shared one and the cofounded firm. Values are: ‘both’ if the entrepreneurs in the dayd had no other work experience between the shared one and the cofounding; ‘left’ (‘right’) if only the left (right) entrepreneur had no other work experience between the shared one and the cofounding; and ‘none’ if for no entrepreneur the shared experience was the last one prior to cofounding.</p></td>
 </tr>
-<tr class="row-even"><td><p>age_left</p></td>
+<tr class="row-even"><td><p>hires_5y_left</p></td>
 <td><p>float64</p></td>
-<td><p>Age of the left entrepreneur, ind_id_left, at the time of cofounding (real or counterfactual)</p></td>
+<td><p>Number of distinct new people who joined the “left” startup within the first five years after the founding</p></td>
 </tr>
-<tr class="row-odd"><td><p>age_right</p></td>
+<tr class="row-odd"><td><p>workforce_5y_left</p></td>
 <td><p>float64</p></td>
-<td><p>Age of the right entrepreneur, ind_id_right, at the time of cofounding (real or counterfactual)</p></td>
+<td><p>Number of distinct people who worked at the “left” startup by the end of the fifth year</p></td>
+</tr>
+<tr class="row-even"><td><p>hires_5y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Number of distinct new people who joined the “right” startup within the first five years after the founding</p></td>
+</tr>
+<tr class="row-odd"><td><p>workforce_5y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Number of distinct people who worked at the “right” startup by the end of the fifth year</p></td>
 </tr>
 </tbody>
 </table>

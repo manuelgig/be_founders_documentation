@@ -102,6 +102,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#t19-entrepreneur-dyads-industries">4.6.19. T19_entrepreneur_dyads_industries</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#t20-entrepreneur-dyads-sectors">4.6.20. T20_entrepreneur_dyads_sectors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#t21-cofounders-count">4.6.21. T21_cofounders_count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t22-employee-turnover">4.6.22. T22_employee_turnover</a></li>
 </ul>
 </li>
 </ul>
@@ -1197,13 +1198,21 @@ in this section)</em></p>
 <td><p>string</p></td>
 <td><p>For entrepreneur dyads who shared an employer in the past (same_org=1), this variable indicates whether the shared employer was the last working experience prior to cofounding (real or counterfactual) —i.e., the entrepreneur had no other job between the shared one and the cofounded firm. Values are: ‘both’ if the entrepreneurs in the dayd had no other work experience between the shared one and the cofounding; ‘left’ (‘right’) if only the left (right) entrepreneur had no other work experience between the shared one and the cofounding; and ‘none’ if for no entrepreneur the shared experience was the last one prior to cofounding.</p></td>
 </tr>
-<tr class="row-even"><td><p>age_left</p></td>
+<tr class="row-even"><td><p>hires_5y_left</p></td>
 <td><p>float64</p></td>
-<td><p>Age of the left entrepreneur, ind_id_left, at the time of cofounding (real or counterfactual)</p></td>
+<td><p>Number of distinct new people who joined the “left” startup within the first five years after the founding</p></td>
 </tr>
-<tr class="row-odd"><td><p>age_right</p></td>
+<tr class="row-odd"><td><p>workforce_5y_left</p></td>
 <td><p>float64</p></td>
-<td><p>Age of the right entrepreneur, ind_id_right, at the time of cofounding (real or counterfactual)</p></td>
+<td><p>Number of distinct people who worked at the “left” startup by the end of the fifth year</p></td>
+</tr>
+<tr class="row-even"><td><p>hires_5y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Number of distinct new people who joined the “right” startup within the first five years after the founding</p></td>
+</tr>
+<tr class="row-odd"><td><p>workforce_5y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Number of distinct people who worked at the “right” startup by the end of the fifth year</p></td>
 </tr>
 </tbody>
 </table>
@@ -2554,6 +2563,57 @@ in this section)</em></p>
 <tr class="row-even"><td><p>num_cofounders</p></td>
 <td><p>int64</p></td>
 <td><p>Total number of cofounders of the organization indicated by org_id</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t22-employee-turnover">
+<span id="tables-t22-employee-turnover-label"></span><h3><span class="section-number">4.6.22. </span>T22_employee_turnover<a class="headerlink" href="#t22-employee-turnover" title="Permalink to this headline"></a></h3>
+<table class="colwidths-given docutils align-default" id="id43">
+<caption><span class="caption-number">Table 4.43 </span><span class="caption-text">T22_employee_turnover</span><a class="headerlink" href="#id43" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>field</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>organization_id</p></td>
+<td><p>string</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>year</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>roles_start</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>roles_end</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hires</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>exits</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>hires_internal</p></td>
+<td><p>int64</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>workforce</p></td>
+<td><p>int64</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>

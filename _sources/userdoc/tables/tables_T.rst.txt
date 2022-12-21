@@ -270,3 +270,16 @@ T21_cofounders_count
    :delim: ;
    :widths: 8, 4, 20
    :header-rows: 1
+
+
+
+.. _tables-T22_employee_turnover-label:
+
+T22_employee_turnover
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T22_employee_turnover
+   :file: T22_employee_turnover.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
