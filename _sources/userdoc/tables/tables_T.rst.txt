@@ -283,3 +283,16 @@ T22_employee_turnover
    :delim: ;
    :widths: 8, 4, 20
    :header-rows: 1
+
+
+
+.. _tables-T23_orbis_financial_data-label:
+
+T23_orbis_financial_data
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T23_orbis_financial_data
+   :file: T23_orbis_financial_data.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1

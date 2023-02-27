@@ -100,11 +100,19 @@
 </tr>
 <tr class="row-even"><td><p>exp_ey</p></td>
 <td><p>float64</p></td>
-<td><p>Work experience end year</p></td>
+<td><p>Work experience end year. Note: the variable takes the value 2020 for work experiences that were ongoing at the time of data collection (ca. 2020).</p></td>
 </tr>
-<tr class="row-odd"><td><p>seq</p></td>
+<tr class="row-odd"><td><p>exp_ey_ongoing</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if exp_ey was missing and it was imputed with 2020 (i.e., exp_sy was not missing and we can assume that the work experience was ongoing at the time of data collection, ca. 2020).</p></td>
+</tr>
+<tr class="row-even"><td><p>seq</p></td>
+<td><p>int64</p></td>
+<td><p>Sequence number. Indicates the order of occurrence of the work/education experiencce (after imputing exp_ey with 2020 in the case of ongoing work experiences).</p></td>
+</tr>
+<tr class="row-odd"><td><p>_seq_src</p></td>
 <td><p>float64</p></td>
-<td><p>Sequence number. Indicates the order in which the work experience entry was (manually) collected from LinkedIn</p></td>
+<td><p>Sequence number. Indicates the order in which the work/study experience entry was (manually) collected from LinkedIn</p></td>
 </tr>
 <tr class="row-even"><td><p>ind_name</p></td>
 <td><p>string</p></td>
@@ -205,9 +213,17 @@
 <td><p>float64</p></td>
 <td><p>Study program ending year</p></td>
 </tr>
-<tr class="row-odd"><td><p>seq</p></td>
+<tr class="row-odd"><td><p>edu_ey_imputed</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if edu_ey was missing, but a year was imputed combining edu_sy and the ISCED level (bachelor: +3, master: +1, phd: +4, tertiary: +3).</p></td>
+</tr>
+<tr class="row-even"><td><p>seq</p></td>
+<td><p>int64</p></td>
+<td><p>Sequence number. Indicates the order of occurrence of the work/education experiencce (after imputing exp_ey with 2020 in the case of ongoing work experiences).</p></td>
+</tr>
+<tr class="row-odd"><td><p>_seq_src</p></td>
 <td><p>float64</p></td>
-<td><p>Sequence number. Indicates the order in which the work experience entry was (manually) collected from LinkedIn</p></td>
+<td><p>Sequence number. Indicates the order in which the work/study experience entry was (manually) collected from LinkedIn</p></td>
 </tr>
 <tr class="row-even"><td><p>ind_name</p></td>
 <td><p>string</p></td>
@@ -416,6 +432,70 @@
 <td><p>float64</p></td>
 <td><p>Number of distinct people who worked at the “right” startup by the end of the fifth year</p></td>
 </tr>
+<tr class="row-even"><td><p>ongoing_left</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if the “left” cofounder’s role in the focal startup is ongoing (at the time of data collection, ca. 2020)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ongoing_right</p></td>
+<td><p>dummy</p></td>
+<td><p>Equals 1 if the “right” cofounder’s role in the focal startup is ongoing (at the time of data collection, ca. 2020)</p></td>
+</tr>
+<tr class="row-even"><td><p>age_left</p></td>
+<td><p>float64</p></td>
+<td><p>Age of the left entrepreneur, ind_id_left, at the time of cofounding (real or counterfactual)</p></td>
+</tr>
+<tr class="row-odd"><td><p>age_right</p></td>
+<td><p>float64</p></td>
+<td><p>Age of the right entrepreneur, ind_id_right, at the time of cofounding (real or counterfactual)</p></td>
+</tr>
+<tr class="row-even"><td><p>operating_revenue_cum_3yr_left</p></td>
+<td><p>float64</p></td>
+<td><p>Operating revenue (Turnover). In euros, cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>operating_revenue_cum_3yr_right</p></td>
+<td><p>float64</p></td>
+<td><p>Operating revenue (Turnover). In euros, cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-even"><td><p>p_l_before_tax_cum_3y_left</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss before tax, in eur; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>p_l_before_tax_cum_3y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss before tax, in eur; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-even"><td><p>net_income_cum_3yr_left</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss for period (=Net income), in euros; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>net_income_cum_3yr_right</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss for period (=Net income), in euros; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-even"><td><p>operating_revenue_cum_5yr_left</p></td>
+<td><p>float64</p></td>
+<td><p>Operating revenue (Turnover). In euros, cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>operating_revenue_cum_5yr_right</p></td>
+<td><p>float64</p></td>
+<td><p>Operating revenue (Turnover). In euros, cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-even"><td><p>p_l_before_tax_cum_5y_left</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss before tax, in eur; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>p_l_before_tax_cum_5y_right</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss before tax, in eur; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-even"><td><p>net_income_cum_5yr_left</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss for period (=Net income), in euros; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>net_income_cum_5yr_right</p></td>
+<td><p>float64</p></td>
+<td><p>Profit/Loss for period (=Net income), in euros; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -428,7 +508,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Manuel Gigena.</p>
+    <p>&#169; Copyright 2023, Manuel Gigena.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
