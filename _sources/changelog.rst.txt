@@ -26,16 +26,12 @@ Changelog
 +          +           +-------------------------------------------------------------------+
 |          |           | New table: T21_cofounders_count                                   |
 +----------+-----------+-------------------------------------------------------------------+
-| 2.0      | Feb 2023  | New table: T22_employee_turnover                                  |
+| 2.0      | Feb 2023  | New tables: T22_employee_turnover, T23_orbis_financial_data       |
 +          +           +-------------------------------------------------------------------+
 |          |           | Fixed missing exp_ey in work events that were ongoing at the      |
 |          |           | time of data collection                                           |
 +          +           +-------------------------------------------------------------------+
 |          |           | Fixed "seq" variable in the flat experience table                 |
-+          +           +-------------------------------------------------------------------+
-|          |           | Added new aggregated financial data from Orbis to the dyads table |
-+          +           +-------------------------------------------------------------------+
-|          |           | New table: T23_orbis_financial_data                               |
 +          +           +-------------------------------------------------------------------+
 |          |           | New variables in the dyads table: employee turnover,              |
 |          |           | ongoing job at the time of data collection, Orbis financial data  |
