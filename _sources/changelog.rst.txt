@@ -38,3 +38,9 @@ Changelog
 |          |           | New variables in the dyads table: employee turnover,              |
 |          |           | ongoing job at the time of data collection, Orbis financial data  |
 +----------+-----------+-------------------------------------------------------------------+
+| 2.1      | Mar 2023  | New variables in the dyads table: same_org_nr, same_org_time_nr   |
+|          |           | same_org_duo_nr, same_org_duo_time_nr, same_org_guo_nr,           |
+|          |           | same_org_guo_time_nr,                                             |
+|          |           | same_sector_nr, same_sector_time_nr, same_funct_area_nr and       |
+|          |           | same_funct_area_time_nr                                           |
++----------+-----------+-------------------------------------------------------------------+
