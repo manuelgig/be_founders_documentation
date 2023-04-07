@@ -44,3 +44,9 @@ Changelog
 |          |           | same_sector_nr, same_sector_time_nr, same_funct_area_nr and       |
 |          |           | same_funct_area_time_nr                                           |
 +----------+-----------+-------------------------------------------------------------------+
+| 2.2      | Apr 2023  | New variables in the dyads table: same_fut_org_id_nr,             |
+|          |           | same_fut_org_id_cofound_nr                                        |
++          +           +-------------------------------------------------------------------+
+|          |           | Fixed ISCED fields (keywords for fields 3 and 4 were mixed up in  |
+|          |           | previous versions, and field 10 was missing)                      |
++----------+-----------+-------------------------------------------------------------------+
