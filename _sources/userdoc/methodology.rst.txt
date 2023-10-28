@@ -441,7 +441,4 @@ at the moment of cofounding a firm.
   | Doctoral degree             | 25        | N/A     |
   +-----------------------------+-----------+---------+
 
-Age
----
-
 .. bibliography::

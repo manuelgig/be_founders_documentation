@@ -1159,21 +1159,29 @@ in this section)</em></p>
 <td><p>int64</p></td>
 <td><p>Number of organizations wherein ind_id_left and ind_id_right both worked (with at least one year of overlap) prior to co-founding the focal startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_org_duo</p></td>
+<tr class="row-odd"><td><p>same_org_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders worked for the same organization during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were co-workers at the time of founding.</p></td>
+</tr>
+<tr class="row-even"><td><p>same_org_duo</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right worked for the same organization (at the DUO-level) in the past and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_org_duo_nr</p></td>
+<tr class="row-odd"><td><p>same_org_duo_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of organizations (duo-level) wherein ind_id_left and ind_id_right both worked (not necessarily at the same time) prior to co-founding the focal startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_org_duo_time</p></td>
+<tr class="row-even"><td><p>same_org_duo_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right worked for the same organization (at the DUO-level) in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_org_duo_time_nr</p></td>
+<tr class="row-odd"><td><p>same_org_duo_time_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of organizations (duo-level) wherein ind_id_left and ind_id_right both worked (with at least one year of overlap) prior to co-founding the focal startup</p></td>
+</tr>
+<tr class="row-even"><td><p>same_org_duo_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders worked for the same organization (DUO level) during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were co-workers at the time of founding.</p></td>
 </tr>
 <tr class="row-odd"><td><p>same_org_guo</p></td>
 <td><p>dummy</p></td>
@@ -1191,21 +1199,29 @@ in this section)</em></p>
 <td><p>int64</p></td>
 <td><p>Number of organizations (guo-level) wherein ind_id_left and ind_id_right both worked (with at least one year of overlap) prior to co-founding the focal startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_sector</p></td>
+<tr class="row-odd"><td><p>same_org_guo_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders worked for the same organization (GUO level) during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were co-workers at the time of founding.</p></td>
+</tr>
+<tr class="row-even"><td><p>same_sector</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right worked in the same bvd sector in the past and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_sector_nr</p></td>
+<tr class="row-odd"><td><p>same_sector_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of sectors wherein ind_id_left and ind_id_right both worked (not necessarily at the same time) prior to co-founding the focal startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_sector_time</p></td>
+<tr class="row-even"><td><p>same_sector_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right worked in the same bvd sector in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_sector_time_nr</p></td>
+<tr class="row-odd"><td><p>same_sector_time_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of sectors wherein ind_id_left and ind_id_right both worked (with at least one year of overlap) prior to co-founding the focal startup</p></td>
+</tr>
+<tr class="row-even"><td><p>same_sector_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders worked in the same sector during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were working in the same sector at the time of founding.</p></td>
 </tr>
 <tr class="row-odd"><td><p>same_funct_area</p></td>
 <td><p>dummy</p></td>
@@ -1223,21 +1239,29 @@ in this section)</em></p>
 <td><p>int64</p></td>
 <td><p>Number of functional areas wherein ind_id_left and ind_id_right both worked (with at least one year of overlap) prior to co-founding the focal startup</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_edu</p></td>
+<tr class="row-odd"><td><p>same_funct_area_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders worked in the same functional area during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders worked in the same functional area at the time of founding.</p></td>
+</tr>
+<tr class="row-even"><td><p>same_edu</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right studied at the same institution in the past and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_edu_nr</p></td>
+<tr class="row-odd"><td><p>same_edu_nr</p></td>
 <td><p>int64</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>same_edu_time</p></td>
+<tr class="row-even"><td><p>same_edu_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if ind_id_left and ind_id_right studied at the same institution in the past and their spells overlapped at least one year, and 0 otherwise</p></td>
 </tr>
-<tr class="row-even"><td><p>same_edu_time_nr</p></td>
+<tr class="row-odd"><td><p>same_edu_time_nr</p></td>
 <td><p>int64</p></td>
 <td></td>
+</tr>
+<tr class="row-even"><td><p>same_edu_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders co-attended education during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were co-attending education at the time of founding.</p></td>
 </tr>
 <tr class="row-odd"><td><p>same_isced_field</p></td>
 <td><p>dummy</p></td>
@@ -1255,103 +1279,107 @@ in this section)</em></p>
 <td><p>int64</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>same_study_time</p></td>
+<tr class="row-odd"><td><p>same_isced_field_time_last_shared_yr</p></td>
+<td><p>float64</p></td>
+<td><p>When the focal cofounders studied in the same ISCED field during the same time (even if their spells don’t overlap perfectly), this variable indicates the last year when they worked together. When the value is equal or greater than “min_cofounding_year_both” (the year the co-founded the real/conterfactual startup), this variable indicates that focal cofounders were studying in the same ISCED field at the time of founding.</p></td>
+</tr>
+<tr class="row-even"><td><p>same_study_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if the spells wherein both entrepreneurs attained education (at any level, in any organization) overlap in at least one year.</p></td>
 </tr>
-<tr class="row-even"><td><p>same_work_time</p></td>
+<tr class="row-odd"><td><p>same_work_time</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if the spells wherein both entrepreneurs worked (for any company, in any role) overlap in at least one year.</p></td>
 </tr>
-<tr class="row-odd"><td><p>last_exp_shared</p></td>
+<tr class="row-even"><td><p>last_exp_shared</p></td>
 <td><p>string</p></td>
 <td><p>For entrepreneur dyads who shared an employer in the past (same_org=1), this variable indicates whether the shared employer was the last working experience prior to cofounding (real or counterfactual) —i.e., the entrepreneur had no other job between the shared one and the cofounded firm. Values are: ‘both’ if the entrepreneurs in the dayd had no other work experience between the shared one and the cofounding; ‘left’ (‘right’) if only the left (right) entrepreneur had no other work experience between the shared one and the cofounding; and ‘none’ if for no entrepreneur the shared experience was the last one prior to cofounding.</p></td>
 </tr>
-<tr class="row-even"><td><p>hires_5y_left</p></td>
+<tr class="row-odd"><td><p>hires_5y_left</p></td>
 <td><p>float64</p></td>
 <td><p>Number of distinct new people who joined the “left” startup within the first five years after the founding</p></td>
 </tr>
-<tr class="row-odd"><td><p>workforce_5y_left</p></td>
+<tr class="row-even"><td><p>workforce_5y_left</p></td>
 <td><p>float64</p></td>
 <td><p>Number of distinct people who worked at the “left” startup by the end of the fifth year</p></td>
 </tr>
-<tr class="row-even"><td><p>hires_5y_right</p></td>
+<tr class="row-odd"><td><p>hires_5y_right</p></td>
 <td><p>float64</p></td>
 <td><p>Number of distinct new people who joined the “right” startup within the first five years after the founding</p></td>
 </tr>
-<tr class="row-odd"><td><p>workforce_5y_right</p></td>
+<tr class="row-even"><td><p>workforce_5y_right</p></td>
 <td><p>float64</p></td>
 <td><p>Number of distinct people who worked at the “right” startup by the end of the fifth year</p></td>
 </tr>
-<tr class="row-even"><td><p>ongoing_left</p></td>
+<tr class="row-odd"><td><p>ongoing_left</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if the “left” cofounder’s role in the focal startup is ongoing (at the time of data collection, ca. 2020)</p></td>
 </tr>
-<tr class="row-odd"><td><p>ongoing_right</p></td>
+<tr class="row-even"><td><p>ongoing_right</p></td>
 <td><p>dummy</p></td>
 <td><p>Equals 1 if the “right” cofounder’s role in the focal startup is ongoing (at the time of data collection, ca. 2020)</p></td>
 </tr>
-<tr class="row-even"><td><p>same_fut_org_id_nr</p></td>
+<tr class="row-odd"><td><p>same_fut_org_id_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of companies where both focal entrepreneurs (‘left’ and ‘right’) worked after the focal dyad, either as employees or as cofounders</p></td>
 </tr>
-<tr class="row-odd"><td><p>same_fut_org_id_cofound_nr</p></td>
+<tr class="row-even"><td><p>same_fut_org_id_cofound_nr</p></td>
 <td><p>int64</p></td>
 <td><p>Number of companies co-founded by the focal entrepreneurs (‘left’ and ‘right’) after the focal dyad</p></td>
 </tr>
-<tr class="row-even"><td><p>age_left</p></td>
+<tr class="row-odd"><td><p>age_left</p></td>
 <td><p>float64</p></td>
 <td><p>Age of the left entrepreneur, ind_id_left, at the time of cofounding (real or counterfactual)</p></td>
 </tr>
-<tr class="row-odd"><td><p>age_right</p></td>
+<tr class="row-even"><td><p>age_right</p></td>
 <td><p>float64</p></td>
 <td><p>Age of the right entrepreneur, ind_id_right, at the time of cofounding (real or counterfactual)</p></td>
 </tr>
-<tr class="row-even"><td><p>operating_revenue_cum_3yr_left</p></td>
+<tr class="row-odd"><td><p>operating_revenue_cum_3yr_left</p></td>
 <td><p>float64</p></td>
 <td><p>Operating revenue (Turnover) of the “left” startup. In euros, cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>operating_revenue_cum_3yr_right</p></td>
+<tr class="row-even"><td><p>operating_revenue_cum_3yr_right</p></td>
 <td><p>float64</p></td>
 <td><p>Operating revenue (Turnover) of the “right” startup. In euros, cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-even"><td><p>p_l_before_tax_cum_3y_left</p></td>
+<tr class="row-odd"><td><p>p_l_before_tax_cum_3y_left</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss before tax of the “left” startup, in eur; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>p_l_before_tax_cum_3y_right</p></td>
+<tr class="row-even"><td><p>p_l_before_tax_cum_3y_right</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss before tax of the “right” startup, in eur; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-even"><td><p>net_income_cum_3yr_left</p></td>
+<tr class="row-odd"><td><p>net_income_cum_3yr_left</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss for period (=Net income) of the “left” startup, in euros; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>net_income_cum_3yr_right</p></td>
+<tr class="row-even"><td><p>net_income_cum_3yr_right</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss for period (=Net income) of the “right” startup, in euros; cumulative over the first 3 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-even"><td><p>operating_revenue_cum_5yr_left</p></td>
+<tr class="row-odd"><td><p>operating_revenue_cum_5yr_left</p></td>
 <td><p>float64</p></td>
 <td><p>Operating revenue (Turnover) of the “left” startup. In euros, cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>operating_revenue_cum_5yr_right</p></td>
+<tr class="row-even"><td><p>operating_revenue_cum_5yr_right</p></td>
 <td><p>float64</p></td>
 <td><p>Operating revenue (Turnover) of the “right” startup. In euros, cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-even"><td><p>p_l_before_tax_cum_5y_left</p></td>
+<tr class="row-odd"><td><p>p_l_before_tax_cum_5y_left</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss before tax of the “left” startup, in eur; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>p_l_before_tax_cum_5y_right</p></td>
+<tr class="row-even"><td><p>p_l_before_tax_cum_5y_right</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss before tax of the “right” startup, in eur; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-even"><td><p>net_income_cum_5yr_left</p></td>
+<tr class="row-odd"><td><p>net_income_cum_5yr_left</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss for period (=Net income) of the “left” startup, in euros; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>net_income_cum_5yr_right</p></td>
+<tr class="row-even"><td><p>net_income_cum_5yr_right</p></td>
 <td><p>float64</p></td>
 <td><p>Profit/Loss for period (=Net income) of the “right” startup, in euros; cumulative over the first 5 years since incorporation. Source: Orbis.</p></td>
 </tr>
