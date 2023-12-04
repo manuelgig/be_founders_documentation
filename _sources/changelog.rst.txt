@@ -58,3 +58,7 @@ Changelog
 |          |           | same_edu_time_last_shared_yr,                                     |
 |          |           | same_isced_field_time_last_shared_yr,                             |
 +----------+-----------+-------------------------------------------------------------------+
+| 2.3      | Dec 2023  | Fixed org_id-bvd_id match in public.orbis_fin,                    |
+|          |           | Rebuilt the dyads table,                                          |
+|          |           | Added multiple categories to the employee_turnover table          |
++----------+-----------+-------------------------------------------------------------------+
