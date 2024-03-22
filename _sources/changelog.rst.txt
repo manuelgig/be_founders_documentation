@@ -63,8 +63,8 @@ Changelog
 |          |           | Added multiple categories to the employee_turnover table          |
 +----------+-----------+-------------------------------------------------------------------+
 | 2.4      | Mar 2023  | Improved the link to Orbis through manual matching and checks.    |
-|          |           | Addded tables with Crunchbase data. Rebuilt the dyads table using |
+|          |           | New tables Crunchbase data. Rebuilt the dyads table using         |
 |          |           | only the Crunchbase startups as focal startups (previous versions |
 |          |           | included 'startups' that we detected on LinkedIn but are not      |
-|          |           | in Crunchbase).                                                   |
+|          |           | in Crunchbase). New variables in the employee turnover table.     |
 +----------+-----------+-------------------------------------------------------------------+
