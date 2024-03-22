@@ -117,19 +117,6 @@ T09_crsp
 
 
 
-.. _tables-T10_bvd-label:
-
-T10_bvd
-^^^^^^^
-
-.. csv-table:: T10_bvd
-   :file: T10_bvd.csv
-   :delim: ;
-   :widths: 8, 4, 20
-   :header-rows: 1
-
-
-
 .. _tables-T11_eter-label:
 
 T11_eter
@@ -293,6 +280,71 @@ T23_orbis_financial_data
 
 .. csv-table:: T23_orbis_financial_data
    :file: T23_orbis_financial_data.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
+
+
+
+.. _tables-T24_cb_focal_startups_landing-label:
+
+T24_cb_focal_startups_landing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T24_cb_focal_startups_landing
+   :file: T24_cb_focal_startups_landing.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
+
+
+
+.. _tables-T25_focal_startups_cbuuid_orgid_bvd-label:
+
+T25_focal_startups_cbuuid_orgid_bvd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T25_focal_startups_cbuuid_orgid_bvd
+   :file: T25_focal_startups_cbuuid_orgid_bvd.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
+
+
+
+.. _tables-T26_kbo_status-label:
+
+T26_kbo_status
+^^^^^^^^^^^^^^
+
+.. csv-table:: T26_kbo_status
+   :file: T26_kbo_status.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
+
+
+
+.. _tables-T27_cb_acquisition-label:
+
+T27_cb_acquisition
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T27_cb_acquisition
+   :file: T27_cb_acquisition.csv
+   :delim: ;
+   :widths: 8, 4, 20
+   :header-rows: 1
+
+
+
+.. _tables-T28_funding_round-label:
+
+T28_funding_round
+^^^^^^^^^^^^^^^^^
+
+.. csv-table:: T28_funding_round
+   :file: T28_funding_round.csv
    :delim: ;
    :widths: 8, 4, 20
    :header-rows: 1

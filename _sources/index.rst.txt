@@ -26,7 +26,7 @@ new and more complex indicators in the future.
 Current version
 ---------------
 
-v2.2 (April 2023)
+v2.3 (March 2024)
 
 #####
 Index
